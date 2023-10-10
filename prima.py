@@ -10,14 +10,13 @@ import numpy as np
 data = pd.read_csv('dataset.csv')
 print(data.head())
 
-# we decide to not consider questionare about eco-anxiety
+# we decide to not consider questionare about climate change
 data_new = data.iloc[:,0:29]
 print(data_new.head())
 
 # inspection of the features
 for feature in data_new.columns:
     print(feature)
-
 print('in total there are ' + str(len(data_new.columns)) + ' features')
 
 # finding the missing values
@@ -58,7 +57,7 @@ plt.ylabel('Count')
 plt.show()
 print("Most of the survey partecipants didn't mention their gender")
 
-# select subsets of the different questions
+# select subsets of the different questionnaires
 df_phq = data_new.iloc[:, 5:14]
 #print(df_phq.head(3))
 df_gad = data_new.iloc[:, 14:21]
@@ -66,7 +65,33 @@ df_gad = data_new.iloc[:, 14:21]
 df_eheals = data_new.iloc[:,21:29]
 #print(df_eheals.head(3))
 
-#substitute the NaN values with the mean of the answers of each person to that questionnaires
+fig, axs = plt.subplots(df_phq.shape[1], figsize=(8, 12))
+# Assegna un colore diverso a ciascun dato
+colors = plt.cm.viridis(np.linspace(0, 1, df_phq.shape[0]))
+
+for i in range(df_phq.shape[1]):
+    axs[i].scatter(range(df_phq.shape[0]), df_phq.iloc[:, i], c=colors)
+    axs[i].set_xlabel('Dati')
+    axs[i].set_ylabel(f'Feature {i+1}')
+    axs[i].set_title(f'Feature {i+1} vs Dati')
+
+plt.tight_layout()
+plt.show()
+def calcolo_var(df, n):
+    varianza = []
+    for i in range(df.shape[0]):
+        for j in range(df.shape[1]):
+            df.iloc[i,j] = round(df.iloc[i,j]/n, 2)
+        v = round(np.nanvar(df.iloc[i,:]), 4)
+        varianza.append(v)
+    return round(np.mean(varianza),4)
+
+print("la varianza di phq è: ", calcolo_var(df_phq,df_phq.max().max()))
+print("la varianza di gad è: ", calcolo_var(df_gad,df_gad.max().max()))
+print("la varianza di eheals è: ", calcolo_var(df_eheals,df_eheals.max().max()))
+
+# la varianza tra le risposte di ciasuna persona è bassa, dunque
+# substitute the NaN values with the mean of the answers of each person to that questionnaires
 def fill_nan_rows(dataf):
     for i in range(dataf.shape[0]):
         for j in range(dataf.shape[1]):
