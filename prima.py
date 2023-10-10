@@ -1,6 +1,7 @@
 import pandas as pd
 import matplotlib.pyplot as plt
 import seaborn as sns
+import numpy as np
 
 # loading of the database given by the professor
 # main content of the csv:
@@ -57,4 +58,31 @@ plt.ylabel('Count')
 plt.show()
 print("Most of the survey partecipants didn't mention their gender")
 
+# select subsets of the different questions
+df_phq = data_new.iloc[:, 5:14]
+#print(df_phq.head(3))
+df_gad = data_new.iloc[:, 14:21]
+#print(df_gad.head(3))
+df_eheals = data_new.iloc[:,21:29]
+#print(df_eheals.head(3))
 
+#substitute the NaN values with the mean of the answers of each person to that questionnaires
+def fill_nan_rows(dataf):
+    for i in range(dataf.shape[0]):
+        for j in range(dataf.shape[1]):
+            if pd.isnull(dataf.iloc[i, j]):
+                M = round(np.nanmean(dataf.iloc[i, :]))
+                dataf.iloc[i, j] = M
+    return dataf
+
+#fillin up NaN values in the questionnaires
+df_phq = fill_nan_rows(df_phq)
+df_gad = fill_nan_rows(df_gad)
+df_eheals = fill_nan_rows(df_eheals)
+
+#create the full data set
+data_full = pd.concat([data_new.iloc[:,0:5],df_phq,df_gad,df_eheals],axis=1)
+print(data_full.head(30))
+
+# check the missing values
+print(data_full.isnull().sum())
