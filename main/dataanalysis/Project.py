@@ -282,7 +282,8 @@ PV = pd.concat([pv01, pv02, pv12], axis = 1)
 df_stat = PV.set_index([df_PCA.columns])
 df_stat.columns = ["01", "02" , "12"]
 print(df_stat)
-#df_threshold = df_stat.iloc[df_stat]
+df_th = df_stat.loc[(df_stat["01"] < 0.001) | (df_stat["02"] < 0.001) | (df_stat["12"]< 0.001)]
+print(df_th)
 
 
 
