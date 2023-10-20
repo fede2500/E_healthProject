@@ -127,7 +127,10 @@ def prepareData(data):
 
     #%%
     # scaling data
-    std_scaler = MinMaxScaler()
-    scaled_df = std_scaler.fit_transform(data_full)
+    scaler = MinMaxScaler(feature_range=(0,1))
+    scaler = scaler.fit(data_full)
+    scaled_df=pd.DataFrame(scaler.transform(data_full))
+    scaled_df.columns=data_full.columns
+
 
     return scaled_df, data_full

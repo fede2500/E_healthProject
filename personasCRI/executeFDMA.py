@@ -1,15 +1,24 @@
 import numpy as np
 from sklearn.decomposition import PCA
 import matplotlib.pyplot as plt
+import prince
 
-def runPCA(data):
+def runFDMA(data):
     # Find the best PCA components
     nums = np.arange(25)
     var_ratio = []
     for num in nums:
-        pca = PCA(n_components=num)
-        pca.fit(data)
-        var_ratio.append(np.sum(pca.explained_variance_ratio_))
+        famd = prince.FAMD(
+            n_components=num,
+            n_iter=3,
+            copy=True,
+            check_input=True,
+            random_state=42,
+            engine="sklearn",
+            handle_unknown="error"  # same parameter as sklearn.preprocessing.OneHotEncoder
+        )
+        famd = famd.fit(data)
+        var_ratio.append(famd.eigenvalues_summary.iloc[num-1,2])
 
     plt.figure()
     plt.grid()
