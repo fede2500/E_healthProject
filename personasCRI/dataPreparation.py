@@ -60,17 +60,9 @@ def prepareData(data):
     print("Most of the survey partecipants didn't mention their gender")
 
 
-
     #%%
-    # la varianza tra le risposte di ciasuna persona è bassa, dunque
-    # substitute the NaN values with the mean of the answers of each person to that questionnaires
-    def fill_nan_rows(dataf):
-        for i in range(dataf.shape[0]):
-            for j in range(dataf.shape[1]):
-                if pd.isnull(dataf.iloc[i, j]):
-                    M = round(np.nanmean(dataf.iloc[i, :]))
-                    dataf.iloc[i, j] = M
-        return dataf
+
+
     #%%
     # select subsets of the different questionnaires
     df_phq = data_new.iloc[:, 5:14]
@@ -106,6 +98,9 @@ def prepareData(data):
     print("la varianza di phq è: ", calcolo_var(df_phq, df_phq.max().max()))
     print("la varianza di gad è: ", calcolo_var(df_gad, df_gad.max().max()))
     print("la varianza di eheals è: ", calcolo_var(df_eheals, df_eheals.max().max()))
+
+    # la varianza tra le risposte di ciasuna persona è bassa, dunque
+    # substitute the NaN values with the mean of the answers of each person to that questionnaires
 
     #%%
     #fillin up NaN values in the questionnaires
