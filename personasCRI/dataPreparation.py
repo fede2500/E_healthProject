@@ -1,8 +1,9 @@
 import pandas as pd
 import numpy as np
-from sklearn.preprocessing import StandardScaler
+from sklearn.preprocessing import MinMaxScaler
 import matplotlib as plt
 import seaborn as sns
+from sklearn.impute import SimpleImputer
 
 from sklearn.decomposition import PCA
 
@@ -30,6 +31,7 @@ def prepareData(data):
     plt.ylabel('Count')
     # plt.show()
     print('The most frequent age is ' + str(data_new['age'].mode()[0]) + ' years old')
+
 
     # plotting education distribution
     plt.figure()
@@ -104,14 +106,15 @@ def prepareData(data):
 
     #%%
     #fillin up NaN values in the questionnaires
-    df_phq = fill_nan_rows(df_phq)
-    df_gad = fill_nan_rows(df_gad)
-    df_eheals = fill_nan_rows(df_eheals)
+
+    imp = SimpleImputer(missing_values=np.nan, strategy='mean')
+    df_phq = pd.DataFrame(imp.fit_transform(df_phq.T).T, columns=df_phq.columns)
+    df_gad = pd.DataFrame(imp.fit_transform(df_gad.T).T, columns=df_gad.columns)
+    df_eheals = pd.DataFrame(imp.fit_transform(df_eheals.T).T, columns=df_eheals.columns)
 
     df_phq['sum phq'] =df_phq.sum(axis=1)
     df_gad['sum gad'] =df_gad.sum(axis=1)
     df_eheals['sum e_heals'] =df_eheals.sum(axis=1)
-
 
 
     #%%
@@ -121,9 +124,10 @@ def prepareData(data):
     #%%
     # check the missing values
     print(data_full.isnull().sum())
+
     #%%
     # scaling data
-    std_scaler = StandardScaler()
+    std_scaler = MinMaxScaler()
     scaled_df = std_scaler.fit_transform(data_full)
 
     return scaled_df, data_full
