@@ -15,20 +15,16 @@ def runFDMA(data):
     # Find the best PCA components
     nums = range(25)
     var_ratio = []
-    '''
-    for num in nums:
+
+    for num in range(1,25):
         famd = prince.FAMD(
             n_components=num,
-            n_iter=3,
-            copy=True,
-            check_input=True,
-            random_state=42,
-            engine="sklearn",
-            handle_unknown="error"  # same parameter as sklearn.preprocessing.OneHotEncoder
+            n_iter=3
+              # same parameter as sklearn.preprocessing.OneHotEncoder
         )
         famd2 = famd.fit(data)
         #var_ratio.append(famd.eigenvalues_summary.iloc[num-1,2])
-    '''
+
 
     famd = prince.FAMD(
         n_components=15,
