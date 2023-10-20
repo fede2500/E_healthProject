@@ -4,6 +4,14 @@ import matplotlib.pyplot as plt
 import prince
 
 def runFDMA(data):
+
+    num = ["age", "income"]
+    cat = ["gender", "education", "marital"]
+    data=data.astype("object")
+    data[num] = data[num].astype("float64")
+
+
+
     # Find the best PCA components
     nums = np.arange(25)
     var_ratio = []
@@ -17,6 +25,7 @@ def runFDMA(data):
             engine="sklearn",
             handle_unknown="error"  # same parameter as sklearn.preprocessing.OneHotEncoder
         )
+
         famd = famd.fit(data)
         var_ratio.append(famd.eigenvalues_summary.iloc[num-1,2])
 

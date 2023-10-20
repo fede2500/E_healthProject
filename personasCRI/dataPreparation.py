@@ -125,12 +125,13 @@ def prepareData(data):
     # check the missing values
     print(data_full.isnull().sum())
 
+    '''
     #%%
     # scaling data
     scaler = MinMaxScaler(feature_range=(0,1))
     scaler = scaler.fit(data_full)
     scaled_df=pd.DataFrame(scaler.transform(data_full))
     scaled_df.columns=data_full.columns
+    '''
 
-
-    return scaled_df, data_full
+    return data_full
