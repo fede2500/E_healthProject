@@ -1,6 +1,6 @@
 import numpy as np
 from sklearn.decomposition import PCA
-import matplotlib as plt
+import matplotlib.pyplot as plt
 def runPCA(data):
     # Find the best PCA components
     nums = np.arange(25)
