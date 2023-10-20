@@ -28,6 +28,7 @@ def runClusterizer(scores):
     # we can select k=3
     km_sel = KMeans(n_clusters=3, init='k-means++', n_init=10, max_iter=100, random_state=42)
     km_sel.fit(scores)
+    print(scores)
     # %%
     col = ['PC1', 'PC2', 'PC3', 'PC4', 'PC5', 'PC6', 'PC7', 'PC8', 'PC9', 'PC10', 'PC11', 'PC12', 'PC13', 'PC14',
            'PC15']

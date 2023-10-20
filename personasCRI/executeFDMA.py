@@ -10,11 +10,12 @@ def runFDMA(data):
     data=data.astype("object")
     data[num] = data[num].astype("float64")
 
-
+    print(data.dtypes)
 
     # Find the best PCA components
-    nums = np.arange(25)
+    nums = range(25)
     var_ratio = []
+    '''
     for num in nums:
         famd = prince.FAMD(
             n_components=num,
@@ -25,10 +26,23 @@ def runFDMA(data):
             engine="sklearn",
             handle_unknown="error"  # same parameter as sklearn.preprocessing.OneHotEncoder
         )
+        famd2 = famd.fit(data)
+        #var_ratio.append(famd.eigenvalues_summary.iloc[num-1,2])
+    '''
 
-        famd = famd.fit(data)
-        var_ratio.append(famd.eigenvalues_summary.iloc[num-1,2])
+    famd = prince.FAMD(
+        n_components=15,
+        n_iter=3,
+        copy=True,
+        check_input=True,
+        random_state=42,
+        engine="sklearn",
+        handle_unknown="error"  # same parameter as sklearn.preprocessing.OneHotEncoder
+    )
 
+    famd = famd.fit(data)
+    var_ratio.append(famd.eigenvalues_summary.iloc[10 - 1, 2])
+    '''
     plt.figure()
     plt.grid()
     plt.plot(nums, var_ratio, marker='o')
@@ -37,11 +51,10 @@ def runFDMA(data):
     plt.title('n_components vs. Explained Variance Ratio')
 
     plt.show()
+    '''
 
     # definitive pca
-    pca_sel = PCA(n_components=15)
-    scores = pca_sel.fit_transform(data)
-    print(pca_sel.explained_variance_ratio_)
-    print(f'Total variance explained: {pca_sel.explained_variance_ratio_.sum()}%')
+    scores = famd.row_coordinates(data)
+    print(scores)
 
-    return scores, pca_sel
+    return scores
