@@ -1,6 +1,7 @@
 import numpy as np
 from sklearn.decomposition import PCA
 import matplotlib.pyplot as plt
+
 def runPCA(data):
     # Find the best PCA components
     nums = np.arange(25)
@@ -17,7 +18,7 @@ def runPCA(data):
     plt.ylabel('Explained variance ratio')
     plt.title('n_components vs. Explained Variance Ratio')
 
-    # plt.show()
+    plt.show()
 
     # definitive pca
     pca_sel = PCA(n_components=15)
