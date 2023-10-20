@@ -32,7 +32,8 @@ def runClusterizer(scores):
     # %%
     col = ['PC1', 'PC2', 'PC3', 'PC4', 'PC5', 'PC6', 'PC7', 'PC8', 'PC9', 'PC10', 'PC11', 'PC12', 'PC13', 'PC14',
            'PC15']
-    data_scores = pd.DataFrame(scores, columns=col)
+    data_scores = pd.DataFrame(scores)
+    data_scores.columns = col
     data_scores['kmeans labels'] = km_sel.labels_
     print(data_scores.head())
     # %%

@@ -54,15 +54,13 @@ def prepareData(data):
     print(data_new['education'].value_counts(ascending = False))
 
     # plotting gender distribution
-    sns.displot(data_new['gender'], bins=4, kde=False, shrink=.8, height=6, aspect=1.5, palette='Set2')
+    sns.displot(data_new['gender'], bins=4, kde=False, shrink=.8, height=6, aspect=1.5)
     plt.title('Gender Distribution')
     plt.xlabel('Gender')
     plt.ylabel('Count')
     # plt.show()
     print("Most of the survey partecipants didn't mention their gender")
 
-
-    #%%
 
 
     #%%
@@ -112,6 +110,7 @@ def prepareData(data):
     df_gad = pd.DataFrame(imp.fit_transform(df_gad.T).T, columns=df_gad.columns)
     df_eheals = pd.DataFrame(imp.fit_transform(df_eheals.T).T, columns=df_eheals.columns)
 
+    # Aggiungiamo delle cariabili che corrispondono alla somma delle risposte a ciascun questionario
     df_phq['sum phq'] =df_phq.sum(axis=1)
     df_gad['sum gad'] =df_gad.sum(axis=1)
     df_eheals['sum e_heals'] =df_eheals.sum(axis=1)
