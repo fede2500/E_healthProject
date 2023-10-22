@@ -46,4 +46,4 @@ def clustersToPersonas(fdma, fdmaScores, data, kmeans):
 
     #We round the results
 
-    return df_freq.round()
+    return df_freq.round(), data
