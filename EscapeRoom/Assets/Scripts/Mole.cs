@@ -38,6 +38,7 @@ public class Mole : MonoBehaviour
         StartCoroutine(ShowHide(start, end));
     }
     
+    
     private void Awake() {
         // Get references to the components we'll need.
         spriteRenderer = GetComponent<SpriteRenderer>();
@@ -56,7 +57,9 @@ public class Mole : MonoBehaviour
         StartCoroutine(ShowHide(start, end));
     }
     
-    private IEnumerator ShowHide(Vector2 start, Vector2 end) {
+    private IEnumerator ShowHide(Vector2 start, Vector2 end)
+    {
+
         // Make sure we start at the start.
         transform.localPosition = start;
 
@@ -95,7 +98,6 @@ public class Mole : MonoBehaviour
         transform.localPosition = start;
         boxCollider2D.offset = boxOffsetHidden;
         boxCollider2D.size = boxSizeHidden;
-        
    
     }
     
@@ -129,6 +131,7 @@ public class Mole : MonoBehaviour
             boxCollider2D.offset = boxOffsetHidden;
             boxCollider2D.size = boxSizeHidden;
         }
+        
     }
     
     private void CreateNext() {
@@ -150,18 +153,13 @@ public class Mole : MonoBehaviour
     private void SetLevel(int level) {
         // As level increases increse the bomb rate to 0.25 at level 10.
         bombRate = Mathf.Min(level * 0.025f, 0.25f);
-
-        // Duration bounds get quicker as we progress. No cap on insanity.
-        float durationMin = Mathf.Clamp(1 - level * 0.1f, 0.01f, 1f);
-        float durationMax = Mathf.Clamp(2 - level * 0.1f, 0.01f, 2f);
-        duration = Random.Range(durationMin, durationMax);
+        
     }
 
     public void SetIndex(int index)
     {
         moleIndex = index;
     }
-    
     
    
 }

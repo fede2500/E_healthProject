@@ -11,15 +11,22 @@ public class ScoreManager : MonoBehaviour
     public GameObject gameOver;
     public TMPro.TextMeshProUGUI scoreT;
     public TMPro.TextMeshProUGUI timeT;
+    public TMPro.TextMeshProUGUI molees;
+    
 
     private float startingTime = 60f;
-
     private float timeRemaining;
     
     private HashSet<Mole> currentMoles = new HashSet<Mole>();
     private int score;
     private bool playing = false;
 
+    private IEnumerator Start()
+    {
+        yield return new WaitForSeconds(3f);
+        playButton.SetActive(true);
+    }
+    
     public void StartGame()
     {
         playButton.SetActive(false);
@@ -52,19 +59,31 @@ public class ScoreManager : MonoBehaviour
             
             timeT.text = $"{(int)timeRemaining / 60}:{(int)timeRemaining % 60:D2}";
             
+            molees.text = $"{currentMoles.Count}";
             // Check if we need to start any more moles.
-            if (currentMoles.Count <= (score/10)) {
+            if (currentMoles.Count <= score/30) {
                 // Choose a random mole.
-                int index = Random.Range(0, moles.Count);
+                int index = Random.Range(0, 9);
                 // Doesn't matter if it's already doing something, we'll just try again next frame.
                 if (!currentMoles.Contains(moles[index])) {
                     currentMoles.Add(moles[index]);
-                    moles[index].Activate(score/10);
+                    if (timeRemaining < 30f)
+                    {
+                        moles[index].Activate((score/30)*5);
+                    }
+                    else
+                    {
+                        moles[index].Activate(score/30);
+                    }
                 }
             }
             
-            
         }
+    }
+
+    public void Refresh()
+    { 
+        currentMoles.Clear();
     }
     
     public void GameOver() {
@@ -77,7 +96,7 @@ public class ScoreManager : MonoBehaviour
 
     public void AddScore(int moleIndex) {
         // Add and update score.
-        score += 1;
+        score += 3;
         scoreT.text = $"{score}";
         
         // Remove from active moles.
@@ -86,7 +105,7 @@ public class ScoreManager : MonoBehaviour
     
     public void RemoveScore(int moleIndex) {
         // Add and update score.
-        score -= 0;
+        score -= 5;
         if (score < 0)
         {
             score = 0;
