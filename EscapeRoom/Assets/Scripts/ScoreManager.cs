@@ -18,7 +18,7 @@ public class ScoreManager : MonoBehaviour
     private float timeRemaining;
     
     private HashSet<Mole> currentMoles = new HashSet<Mole>();
-    private int score;
+    private int score=0;
     private bool playing = false;
 
     private IEnumerator Start()
