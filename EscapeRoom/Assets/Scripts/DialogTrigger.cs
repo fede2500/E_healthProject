@@ -17,6 +17,11 @@ public class DialogTrigger : MonoBehaviour
         
         
     }
+    
+    private void OnTriggerEnter2D()
+    {
+        TriggerDialogue();
+    }
 
     // Update is called once per frame
     void Update()
