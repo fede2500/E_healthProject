@@ -140,7 +140,8 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      shelf-png_2075856_0: -5590552273896056211
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
