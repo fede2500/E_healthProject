@@ -1,9 +1,12 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 
 public class BlockMovements : MonoBehaviour
 {
+    public TextMeshProUGUI textToShow;
+    public Collider2D finishBlock;
     private bool isSelected = false;
     
     void OnMouseDown()
@@ -36,22 +39,22 @@ public class BlockMovements : MonoBehaviour
             if (Input.GetKeyDown(KeyCode.RightArrow))  // Cambia KeyCode in base alla tua esigenza
             {
                 // Sposta il blocco a destra
-                transform.Translate(Vector2.right * 20 * Time.deltaTime);
+                transform.Translate(Vector2.right * 25 * Time.deltaTime);
             }
             else if (Input.GetKeyDown(KeyCode.LeftArrow))  // Cambia KeyCode in base alla tua esigenza
             {
                 // Sposta il blocco a destra
-                transform.Translate(Vector2.left * 20 * Time.deltaTime);
+                transform.Translate(Vector2.left * 25 * Time.deltaTime);
             }
             else if (Input.GetKeyDown(KeyCode.UpArrow))  // Cambia KeyCode in base alla tua esigenza
             {
                 // Sposta il blocco a destra
-                transform.Translate(Vector2.up * 20 * Time.deltaTime);
+                transform.Translate(Vector2.up * 25 * Time.deltaTime);
             }
             else if (Input.GetKeyDown(KeyCode.DownArrow))  // Cambia KeyCode in base alla tua esigenza
             {
                 // Sposta il blocco a destra
-                transform.Translate(Vector2.down * 20 * Time.deltaTime);
+                transform.Translate(Vector2.down * 25 * Time.deltaTime);
             } 
             
             
@@ -65,7 +68,15 @@ public class BlockMovements : MonoBehaviour
             // Controlla se ci sono collisioni con altri blocchi
             foreach (Collider2D altroCollider in colliderAltriBlocchi)
             {
-                if (altroCollider != colliderAttuale)
+                
+                if(altroCollider.Equals(finishBlock))
+                {
+                    textToShow.gameObject.SetActive(true);
+                    break;
+                }
+                
+             
+                if (altroCollider != colliderAttuale && !altroCollider.Equals(finishBlock))
                 {
                     // Se c'è sovrapposizione, annulla il movimento
                     transform.position = posizioneAttuale;
@@ -75,29 +86,4 @@ public class BlockMovements : MonoBehaviour
         }
     }
     
-    private void FixedUpdate()
-    {
-        /*
-        //rb.AddForce(0,0,1000 * Time.deltaTime);
-        
-        if(moveLeft)
-        {
-            rb.AddForce(-500 * Time.deltaTime, 0, 0);
-        }
-        
-        if (moveRight)
-        {
-            rb.AddForce(500 * Time.deltaTime, 0, 0);
-        }
-        */
-    }
-    
-    private void OnCollisionEnter(Collision other)
-    {
-        if (other.collider.CompareTag("Block"))
-        {
-          // rb.AddForce(0,0,0);
-        }
-       
-    }
 }
