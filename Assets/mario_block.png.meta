@@ -140,7 +140,8 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      mario_block_0: 6596650918770628359
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

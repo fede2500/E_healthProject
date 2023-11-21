@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 
-public class ScoreManager : MonoBehaviour
+public class ScoreManagerMole : MonoBehaviour
 {
     public List<Mole> moles; 
     public GameObject playButton;

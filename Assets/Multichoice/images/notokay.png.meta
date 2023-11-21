@@ -128,7 +128,8 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      notokay_0: 4728561734981647727
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

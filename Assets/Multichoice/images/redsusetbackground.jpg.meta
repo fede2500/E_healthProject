@@ -128,7 +128,8 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      redsusetbackground_0: 1482509643881646433
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -140,7 +140,8 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      pergamena_0: -3760102511214649650
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

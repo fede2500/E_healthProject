@@ -7,7 +7,7 @@ using UnityEngine;
 public class Mole : MonoBehaviour
 {
     
-    public ScoreManager scoreManager;
+    public ScoreManagerMole scoreManager;
     public Sprite mole;
     public Sprite moleHit;
     public Sprite bomb;
