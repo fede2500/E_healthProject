@@ -7,7 +7,7 @@ public class GameData
     private static GameData gameDataInstance;
     private string currentObjectMinigame;
     private Dictionary<string, bool> minigame_played_status = new Dictionary<string, bool>();
-    private Vector2 player;
+    public Vector2 player;
     private bool button;
     private bool computerPlayed;
     
