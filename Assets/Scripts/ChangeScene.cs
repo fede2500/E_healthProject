@@ -5,13 +5,6 @@ using System.Collections;
 
 public class SceneChanger : MonoBehaviour
 {
-    public bool hittable = false;
-    private void OnMouseDown()
-    {
-        Debug.Log("ciao");
-        ChangeSceneWithDelay("TrueFake");
-    }
-    
     // Metodo chiamato quando il pulsante viene premuto
     public void ChangeSceneWithDelay(string sceneName)
     {
@@ -23,12 +16,9 @@ public class SceneChanger : MonoBehaviour
     private IEnumerator WaitAndLoadScene(string sceneName)
     {
         // Attendi due secondi
-        yield return new WaitForSeconds(0);
+        yield return new WaitForSeconds(2);
 
         // Carica la scena specificata
-        if (hittable)
-        {
-            SceneManager.LoadScene(sceneName);
-        }
+        SceneManager.LoadScene(sceneName);
     }
 }

@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: a7acb094f32fa084a91d74fea97dc431
+guid: 5d134faffd444df40b2f7975acb1e4ec
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 5283823519848514159
-    second: SitoFalso_0
+      213: -3983133271860697003
+    second: Non_Att_0
   externalObjects: {}
   serializedVersion: 12
   mipmaps:
@@ -94,17 +94,29 @@ TextureImporter:
     overridden: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: SitoFalso_0
+      name: Non_Att_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 2160
-        height: 1620
+        width: 2093
+        height: 1502
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -112,8 +124,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: f62cc641f79e35940800000000000000
-      internalID: 5283823519848514159
+      spriteID: 55824bd846119b8c0800000000000000
+      internalID: -3983133271860697003
       vertices: []
       indices: 
       edges: []
@@ -128,8 +140,7 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable:
-      SitoFalso_0: 5283823519848514159
+    nameFileIdTable: {}
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

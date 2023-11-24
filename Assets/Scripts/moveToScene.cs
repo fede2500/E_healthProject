@@ -18,24 +18,25 @@ public class moveToScene : MonoBehaviour
         data.setPlayer(new Vector2(playerObj.transform.position.x, playerObj.transform.position.y));
         data.setCurrentObjectMinigame(gameObject.name);
         
-        StartCoroutine(LoadYourAsyncScene());
-    }
-    IEnumerator LoadYourAsyncScene()
-    {
-        // The Application loads the Scene in the background as the current Scene runs.
-        // This is particularly good for creating loading screens.
-        // You could also load the Scene by using sceneBuildIndex. In this case Scene2 has
-        // a sceneBuildIndex of 1 as shown in Build Settings.
+        AsyncOperation asyncLoad ;
 
-        AsyncOperation asyncLoad = SceneManager.LoadSceneAsync("TrueFake");
-
-        // Wait until the asynchronous scene fully loads
-        while (!asyncLoad.isDone)
+        switch (gameObject.name)
         {
-            yield return null;
+            case "Computer":
+                asyncLoad = SceneManager.LoadSceneAsync("Siti_att_nonAtt");
+                break;
+            case "TV":
+                asyncLoad = SceneManager.LoadSceneAsync("Profiling_anx _pix");
+                break;
+            case "Locker":
+                asyncLoad = SceneManager.LoadSceneAsync("PharmaScene");
+                break;
+            case "Bookshelf":
+                asyncLoad = SceneManager.LoadSceneAsync("Menu");
+                break;
+            
         }
     }
-
     
 }
 

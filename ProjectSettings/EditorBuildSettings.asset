@@ -12,13 +12,28 @@ EditorBuildSettings:
     path: Assets/Scenes/Profiling_anx _pix.unity
     guid: 617be047c1c53754ba145233ed36957d
   - enabled: 1
+    path: Assets/Scenes/Att_site.unity
+    guid: 53fff11a5b6c9694786c939cebb8bf1a
+  - enabled: 0
     path: Assets/Scenes/TrueFake.unity
     guid: 281fc816f872ec242a6046cb27a38fc8
   - enabled: 1
+    path: Assets/Scenes/PharmaScene.unity
+    guid: 2e0824e724a944e4faf78b731fc845cf
+  - enabled: 0
     path: Assets/Scenes/selectButtons.unity
     guid: c21c2d5df2bba5b49b954639f269d797
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/TrueSite.unity
     guid: 5fa14f23b16448d4f9530398e2bb5688
+  - enabled: 1
+    path: Assets/Scenes/Game.unity
+    guid: f57fe0e2fe6e1f84ea7e45e33685de42
+  - enabled: 1
+    path: Assets/Scenes/Menu.unity
+    guid: 7a136493babc75e4ab68c694c0c386ec
+  - enabled: 1
+    path: Assets/Scenes/Siti_att_nonAtt.unity
+    guid: 96570dfab107b6648ac99eea465bf61c
   m_configObjects: {}
   m_UseUCBPForAssetBundles: 0

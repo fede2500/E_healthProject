@@ -15,10 +15,20 @@ public class DialogTrigger : MonoBehaviour
         }
         else
         {
-            if (gameObject.name == "Computer")
+            switch (gameObject.name)
             {
-                dialogue.sentences = new[] { "Use the computer!" };
-            
+                case "Computer":
+                    dialogue.sentences = new[] { "Use the computer!" };
+                    break;
+                case "TV":
+                    dialogue.sentences = new[] { "Use the TV!" };
+                    break;
+                case "Locker":
+                    dialogue.sentences = new[] { "Use the Locker!" };
+                    break;
+                case "Bookshelf":
+                    dialogue.sentences = new[] { "Use the Bookshelf!" };
+                    break;
             }
         }
 

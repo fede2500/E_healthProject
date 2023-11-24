@@ -7,9 +7,11 @@ public class GameData
     private static GameData gameDataInstance;
     private string currentObjectMinigame;
     private Dictionary<string, bool> minigame_played_status = new Dictionary<string, bool>();
-    public Vector2 player;
+    public Vector2 player = Vector2.zero;
     private bool button;
     private bool computerPlayed;
+
+    private int cluster;
     
     private GameData() {} 
     
@@ -19,6 +21,16 @@ public class GameData
             gameDataInstance = new GameData();
         }
         return gameDataInstance;
+    }
+    
+    public void setCluster(int cluster)
+    {
+        this.cluster = cluster;
+    }
+
+    public int getCluster()
+    {
+        return cluster;
     }
 
     public Vector2 getPlayer()
@@ -31,6 +43,17 @@ public class GameData
         player = playerSet;
     }
 
+    public bool isNoMinigamePlayed()
+    {
+        if (minigame_played_status.Count == 0)
+        {
+            return true;
+        }
+        else
+        {
+            return false;
+        }
+    }
     public bool isMinigamePlayed(string gameObjectName)
     {
         if (minigame_played_status.ContainsKey(gameObjectName))

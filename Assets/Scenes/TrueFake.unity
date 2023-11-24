@@ -707,7 +707,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 03f58eea01869c149967af7de1c5635d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hittable: 0
 --- !u!1001 &758878937
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1293,7 +1292,7 @@ SpriteRenderer:
   m_Size: {x: 21.6, y: 16.2}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!4 &1342393831
@@ -1474,7 +1473,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 03f58eea01869c149967af7de1c5635d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hittable: 0
 --- !u!1 &1626072635
 GameObject:
   m_ObjectHideFlags: 0
@@ -1541,7 +1539,7 @@ SpriteRenderer:
   m_Size: {x: 21.6, y: 16.2}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!4 &1626072637

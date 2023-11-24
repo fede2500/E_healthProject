@@ -23,18 +23,31 @@ public class SceneManage : MonoBehaviour
     {   
         GameObject playerObj = GameObject.Find("Player");
         GameData data = GameData.getInstance();
-        if (data.getPlayer()!=null) {
+        
+        if (data.getPlayer()!=Vector2.zero) {
             player = data.getPlayer();
             playerObj.transform.position = player;
         }
         
-        
-        dialogue.sentences = new[]
+       if( data.isNoMinigamePlayed() )
         {
-            "Ciao, benvenuto nel gioco!",
-            "Sei pronto per una fantastica avventura?",
-            "Seguimi! Andiamo!"
-        };
+            dialogue.sentences = new[]
+            {
+                "Hi (nome)! I'm sorry you're stuck here to take care of me, but I'm really sick.",
+                "Anyway Could you book a visit for me? Check on the computer to find a reliable website.",
+            };
+        }
+
+       //TODO : check dimension of minigamePlayed
+       if (data.isMinigamePlayed("Computer"))
+       {
+           dialogue.sentences = new[]
+           {
+               "So when is it? ",
+               "Tomorrow at 10:30 a.m.",
+           };
+       }
+        
         FindObjectOfType<DialogManager>().StartDialogue(dialogue);
     }
      
