@@ -8,6 +8,7 @@ public class SubmitSolution : MonoBehaviour
     private ScoreManager _scoreManager = ScoreManager.getInstance();
     private bool correct = false;
     public TextMeshProUGUI textToShow;
+    public GameObject end;
   
     private void OnMouseDown()
     {
@@ -21,6 +22,7 @@ public class SubmitSolution : MonoBehaviour
             )
         {
             textToShow.SetText("You win!");
+            end.SetActive(true);
         }
         else
         {

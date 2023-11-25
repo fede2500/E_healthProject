@@ -10,10 +10,18 @@ public class goBack : MonoBehaviour
     // Start is called before the first frame update
     private void OnMouseDown()
     {
-
         data.setMinigamePlayed();
         
         SceneManager.LoadScene(0);
-        
     }
+    
+    public void goback()
+    {
+        
+        data.setMinigamePlayed();
+        
+        SceneManager.LoadScene(0);
+    }
+    
+    
 }

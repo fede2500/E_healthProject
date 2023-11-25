@@ -35,5 +35,8 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Siti_att_nonAtt.unity
     guid: 96570dfab107b6648ac99eea465bf61c
+  - enabled: 1
+    path: Assets/Scenes/Non_att_site.unity
+    guid: e10c40d7defdcab4683813e121418a38
   m_configObjects: {}
   m_UseUCBPForAssetBundles: 0

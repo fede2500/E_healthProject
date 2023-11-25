@@ -1940,6 +1940,11 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 2059354945440952615, guid: 34af95a6662059d478519ccf00493deb, type: 3}
   m_PrefabInstance: {fileID: 2057413934}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &2094342256 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6869167054073606988, guid: a18e7a3a8fa544947a6ea6edc4f727a6, type: 3}
+  m_PrefabInstance: {fileID: 1184167636}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &2136521688
 GameObject:
   m_ObjectHideFlags: 0
@@ -1952,6 +1957,7 @@ GameObject:
   - component: {fileID: 2136521692}
   - component: {fileID: 2136521691}
   - component: {fileID: 2136521690}
+  - component: {fileID: 2136521693}
   m_Layer: 5
   m_Name: Att_site
   m_TagString: Untagged
@@ -2023,10 +2029,10 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 11500000, guid: 71091877947fb9145abe7631102f7b91, type: 3}
-        m_TargetAssemblyTypeName: UnityEngine.Object, UnityEngine
-        m_MethodName: 
-        m_Mode: 5
+      - m_Target: {fileID: 2136521693}
+        m_TargetAssemblyTypeName: DialogTrigger, Assembly-CSharp
+        m_MethodName: TriggerDialogue
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -2035,6 +2041,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 1
+      - m_Target: {fileID: 2094342256}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
 --- !u!114 &2136521691
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2073,6 +2091,21 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2136521688}
   m_CullTransparentMesh: 1
+--- !u!114 &2136521693
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2136521688}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 71091877947fb9145abe7631102f7b91, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogue:
+    sentences:
+    - "Are you sure that\u2019s the right website?"
 --- !u!1001 &3245743150894692543
 PrefabInstance:
   m_ObjectHideFlags: 0
