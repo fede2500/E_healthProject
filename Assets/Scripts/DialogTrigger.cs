@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Threading;
 using UnityEngine;
 
 public class DialogTrigger : MonoBehaviour
@@ -11,28 +12,34 @@ public class DialogTrigger : MonoBehaviour
     {
         if (data.isMinigamePlayed(gameObject.name))
         {
-            dialogue.sentences = new[] { "You already played this minigame!" };
+            //dialogue.sentences = new[] { "You already played this minigame!" };
+            //FindObjectOfType<DialogManager>().StartDialogue(dialogue);
         }
         else
         {
-            switch (gameObject.name)
+            if (gameObject.name.Equals(data.getFirstGameName()))
             {
-                case "Computer":
-                    dialogue.sentences = new[] { "Use the computer!" };
-                    break;
-                case "TV":
-                    dialogue.sentences = new[] { "Use the TV!" };
-                    break;
-                case "Locker":
-                    dialogue.sentences = new[] { "Use the Locker!" };
-                    break;
-                case "Bookshelf":
-                    dialogue.sentences = new[] { "Use the Bookshelf!" };
-                    break;
+                
+                dialogue.sentences = new[] { "Use the " + gameObject.name + " !" };
+                
             }
+            else
+            {
+                if (data.isMinigamePlayed(data.getPrecedentGameName(gameObject.name)))
+                {
+                    dialogue.sentences = new[] { "Use the " + gameObject.name + " !" };
+                }
+                else
+                {
+                    dialogue.sentences = new[] { "You still need to unlock this minigame" };
+                }
+            }
+            
+            FindObjectOfType<DialogManager>().StartDialogue(dialogue);
+          
         }
 
-        FindObjectOfType<DialogManager>().StartDialogue(dialogue);
+        
         
     }
     // Start is called before the first frame update

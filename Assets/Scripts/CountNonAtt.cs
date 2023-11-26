@@ -9,14 +9,22 @@ public class CountNonAtt : MonoBehaviour
     public TMPro.TextMeshProUGUI countT;
     public GameObject good;
     public GameObject goback;
+    
+    
+    private Dictionary<string, bool> fake_already_checked = new Dictionary<string, bool>();
+    
     // Start is called before the first frame update
     public void decreaseCount()
     {
-        count -= 1;
+        
+            //fake_already_checked.Add(gameObject.name, true);
+            count -= 1;
+
     }
 
     private void Update()
     {
+        
         countT.text = $"{count}";
 
         if (count == 0)
