@@ -17,6 +17,7 @@ public class Personashandler : MonoBehaviour
     public TMP_Text _questionText;
     public List<TMP_Text> possibleanswers = new List<TMP_Text>(3);
     private static GameData gameDataInstance;
+    //private Clusterization clus;
     
     void Start()
     {
@@ -31,6 +32,7 @@ public class Personashandler : MonoBehaviour
             _questionText.text = string.Empty;
             questions.currentQuestion = 0;
             ClearQuestions();
+            //clus.CalculatingClusters();
             SceneManager.LoadScene("Room");
             return;
         }

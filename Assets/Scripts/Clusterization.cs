@@ -19,10 +19,10 @@ public class Clusterization : MonoBehaviour
 
     public int [] freq = new int[] {0, 0, 0};
 
-
+    public Clusterization() {} 
+    
 public void CalculatingFrequency(TMP_Text answer)
     {
-        gameDataInstance = GameData.getInstance();
         
         if(questions.questionList[questions.currentQuestion].answers[0] == answer.text)
         {
@@ -41,13 +41,17 @@ public void CalculatingFrequency(TMP_Text answer)
         {
             possibleanswers[i].interactable = false;
         }
-        questions.currentQuestion++;
         questions.questionList[questions.currentQuestion].questioned = true;
+        questions.currentQuestion++;
+        
+        CalculatingClusters();
+        
         Debug.Log($"{freq[0]}");
         Debug.Log($"{freq[1]}");
         Debug.Log($"{freq[2]}");
 
         StartCoroutine(CalculatingFrequencies());
+        
     }
 
     private IEnumerator CalculatingFrequencies()
@@ -63,11 +67,40 @@ public void CalculatingFrequency(TMP_Text answer)
         
     }
 
-    public void calculatingClusters()
+    public void CalculatingClusters()
     {
-        
-        
-        
+        gameDataInstance = GameData.getInstance();
+        int age = gameDataInstance.getPlayerAge();
+
+        double clust = 0;
+        if (age < 32)
+        {
+            clust = 0;
+        }
+        else
+        {
+            clust = 1.5;
+        }
+
+        clust = clust + freq[0] * 0 + freq[1] * 1 + freq[2] * 2;
+
+
+        if (clust <= 3.5)
+        {
+            gameDataInstance.setPlayerCluster(0);
+            Debug.Log($"{gameDataInstance.getPlayerCluster()}");
+        }
+        else if (clust > 3.5 && clust < 7.5)
+        {
+            gameDataInstance.setPlayerCluster(1);
+            Debug.Log($"{gameDataInstance.getPlayerCluster()}");
+        }
+        else if (clust >=7.5)
+        {
+            gameDataInstance.setPlayerCluster(2);
+            Debug.Log($"{gameDataInstance.getPlayerCluster()}");
+        }
+
     }
 }
 
