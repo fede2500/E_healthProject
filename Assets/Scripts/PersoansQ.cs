@@ -16,21 +16,14 @@ public class PersonasQ : ScriptableObject
     }
 
     public int currentQuestion = 0;
-    // public List<int> freq = new List<int>(3);
-
     
     public List<ClusteringQuestions> questionList;
 
     public void AddQuestion()
     {
         questionList.Add(new ClusteringQuestions());
-    }
 
-    // public void initialization(List<int> freq)
-    // {
-    //     for(var i = 0; i < 3; i++)
-    //     {
-    //         freq[i] = 0;
-    //     }
-    // }
+    }
+
+    
 }

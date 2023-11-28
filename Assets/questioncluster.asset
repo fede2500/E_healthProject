@@ -1,0 +1,46 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b6b95b846d1519f4b8fe9d95cd6cd55d, type: 3}
+  m_Name: questioncluster
+  m_EditorClassIdentifier: 
+  currentQuestion: 0
+  questionList:
+  - question: Are you anxious to look after your relative?
+    answers:
+    - Yes
+    - No
+    - I don't mind
+    questioned: 0
+  - question: Do you consider yourself a person that can't perform well under stress?
+    answers:
+    - Yes
+    - No
+    - Not much
+    questioned: 0
+  - question: Are you easily annoiable if you can't perform a task?
+    answers:
+    - Yes
+    - No
+    - Not much
+    questioned: 0
+  - question: Do you know how to find helpful health resources on the internet?
+    answers:
+    - Yes
+    - No
+    - Not much
+    questioned: 0
+  - question: Can you read and understand a medical resource?
+    answers:
+    - Yes
+    - No
+    - Not much
+    questioned: 0

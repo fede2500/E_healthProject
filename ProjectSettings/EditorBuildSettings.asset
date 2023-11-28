@@ -6,8 +6,17 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+    path: Assets/Scenes/Age.unity
+    guid: 6016f8747824b21468c243de7267c4a6
+  - enabled: 1
+    path: Assets/Scenes/Name.unity
+    guid: b0f11add77c1d194eb509da2c8423110
+  - enabled: 1
     path: Assets/Scenes/Room.unity
     guid: acdf8372ae507034da4a766d01104cc8
+  - enabled: 1
+    path: Assets/Scenes/PersQuestions.unity
+    guid: 90a5258e18fe15a47b9a64644ed8f29f
   - enabled: 1
     path: Assets/Scenes/Profiling_anx _pix.unity
     guid: 617be047c1c53754ba145233ed36957d

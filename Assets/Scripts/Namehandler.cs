@@ -15,20 +15,27 @@ public class Namehandler : MonoBehaviour
     public InputField NameIn;
     string TextName;
     private string key = "Name";
-
+    private static GameData gameDataInstance;
+    
     void Start()
     {
         //TextName = PlayerPrefs.GetString(key);
         NameIn.text = "Name";
+        gameDataInstance = GameData.getInstance();
+
     }
 
     public void SaveName()
     {
         TextName = NameIn.text;
         PlayerPrefs.SetString(key, TextName);
-       // PlayerPrefs.Save();
+        gameDataInstance.setPlayerName(TextName);
         SceneManager.LoadScene("Age");
+        
     }
+    
+    
+    
 
         
 }

@@ -6,6 +6,7 @@ public class GameData
 {
     private string playerName;
     private int playerCluster;
+    private int playerAge;
     
     private static GameData gameDataInstance;
     private string currentObjectMinigame;
@@ -32,6 +33,16 @@ public class GameData
         return gameDataInstance;
     }
 
+    public int getPlayerAge()
+    {
+        return playerAge;
+    }
+
+    public void setPlayerAge(int age)
+    {
+        playerAge = age;
+    }
+    
     public string getPlayerName()
     {
         return playerName;

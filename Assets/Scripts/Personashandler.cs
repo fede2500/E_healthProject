@@ -16,10 +16,12 @@ public class Personashandler : MonoBehaviour
     [SerializeField]
     public TMP_Text _questionText;
     public List<TMP_Text> possibleanswers = new List<TMP_Text>(3);
+    private static GameData gameDataInstance;
     
     void Start()
     {
         AskQuestion();
+        gameDataInstance = GameData.getInstance();
     }
 
     public void AskQuestion()
@@ -33,13 +35,12 @@ public class Personashandler : MonoBehaviour
             return;
         }
 
+        
         _questionText.text = questions.questionList[questions.currentQuestion].question;
         possibleanswers[0].text = questions.questionList[questions.currentQuestion].answers[0];
         possibleanswers[1].text = questions.questionList[questions.currentQuestion].answers[1];
         possibleanswers[2].text = questions.questionList[questions.currentQuestion].answers[2];
-        questions.questionList[questions.currentQuestion].questioned = true;
-        
-        questions.currentQuestion++;
+  
     }
 
     public void ClearQuestions()
@@ -62,5 +63,6 @@ public class Personashandler : MonoBehaviour
         }
         Debug.Log("Questions Left");
         return validQuestion;
-    }
+        
+    }
 }

@@ -31,11 +31,12 @@ public class SceneManage : MonoBehaviour
         
        if( data.isNoMinigamePlayed() )
         {
-            data.setPlayerName("Pingopallo");
+            
+            data.setPlayerName($"{data.getPlayerName()}");
             data.setPlayerCluster(2);
             dialogue.sentences = new[]
             {
-                "Hi " + data.getPlayerName() + " ! I'm sorry you're stuck here to take care of me, but I'm really sick.",
+                "Hi " + data.getPlayerName() + "! I'm sorry you're stuck here to take care of me, but I'm really sick.",
                 "Anyway Could you book a visit for me? Check on the computer to find a reliable website.",
             };
         }
