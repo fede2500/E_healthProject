@@ -1,37 +1,29 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class CountNonAtt : MonoBehaviour
 {
-    public int count = 5;
     public TMPro.TextMeshProUGUI countT;
+    private ScoreManagerNonAttSite _scoreManagerNonAttSite = ScoreManagerNonAttSite.getInstance();
     public GameObject good;
     public GameObject goback;
-    
-    
-    private Dictionary<string, bool> fake_already_checked = new Dictionary<string, bool>();
-    
-    // Start is called before the first frame update
-    public void decreaseCount()
-    {
-        
-            //fake_already_checked.Add(gameObject.name, true);
-            count -= 1;
 
+    public void onSelectObject()
+    {
+        _scoreManagerNonAttSite.addSelectedObject(gameObject.name);
+    }
+
+    private void Start()
+    {
+        countT.text = countT.text = $"{_scoreManagerNonAttSite.getInitialScore()}";
     }
 
     private void Update()
     {
-        
-        countT.text = $"{count}";
-
-        if (count == 0)
+        countT.text = countT.text = $"{_scoreManagerNonAttSite.getActualScore()}";
+        if (_scoreManagerNonAttSite.getActualScore() == 0)
         {
             good.SetActive(true);
             goback.SetActive(true);
-            
         }
     }
 }
