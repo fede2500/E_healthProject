@@ -24,6 +24,7 @@ public class QuestionData : MonoBehaviour
     void Start()
     {
         gameDataInstance = GameData.getInstance();
+        gameDataInstance.setPlayerCluster(1);
         SetTheQuestions();
         AskQuestion();
     }
@@ -32,7 +33,7 @@ public class QuestionData : MonoBehaviour
     {
         if (gameDataInstance.getPlayerCluster() == 0)
         {
-            for (var i = 6; i < questions.questionList.Count(); i++)
+            for (var i = 6; i < 18; i++)
             {
                 questions.questionList[i].questioned = true;
             }
@@ -44,7 +45,7 @@ public class QuestionData : MonoBehaviour
                 questions.questionList[i].questioned = true;
             }
 
-            for (var i = 12; i < questions.questionList.Count(); i++)
+            for (var i = 12; i < 18; i++)
             {
                 questions.questionList[i].questioned = true;
             }
@@ -71,7 +72,7 @@ public class QuestionData : MonoBehaviour
         var randomIndex = 0;
         do
         {
-            var scoreasint = int.Parse(scores.scoreText.text);
+            var scoreasint =  int.Parse(scores.scoreText.text);
             if (gameDataInstance.getPlayerCluster()==0)
             {
                 randomIndex = UnityEngine.Random.Range(0, 5);
