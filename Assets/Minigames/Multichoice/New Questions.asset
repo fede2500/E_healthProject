@@ -14,6 +14,59 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   currentQuestion: 0
   questionList:
-  - question: 
-    answer: 
+  - question: Osteoporosis
+    answer: Condition that causes the bones to become weaker and easily broke
+    questioned: 0
+  - question: Impetigo
+    answer: Infectious skin disease in which yellowish areas appear on the body
+    questioned: 0
+  - question: Pubmed
+    answer: Text archive of biomedical life scieces journal literature
+    questioned: 0
+  - question: SnomedCT
+    answer: Sistematic computer processable collection of medical terms
+    questioned: 0
+  - question: Echocardiogram
+    answer: A test using ultrasound to eximine the structure and the functionalty
+      of the heart.
+    questioned: 0
+  - question: Electrocariogram
+    answer: A drawing or electronic image made by an electrocardiograph
+    questioned: 0
+  - question: Caffeine
+    answer: A stimolant substance found in coffe and tea
+    questioned: 0
+  - question: Paracetamol
+    answer: A drug used to reduce pain
+    questioned: 0
+  - question: Cardiac problem
+    answer: Heart related problem
+    questioned: 0
+  - question: Catheterize bladder
+    answer: Put a tube where the urine comes out
+    questioned: 0
+  - question: 'Electronic Health Record (EHR):'
+    answer: Collection of a patient medical data that can be shared across different
+      healthcare settings
+    questioned: 0
+  - question: Haemorrage
+    answer: Large flow of blood from a damged blood vessel
+    questioned: 0
+  - question: Sphygmomanometer
+    answer: Device for measuring blood pressure
+    questioned: 0
+  - question: E-Prescription
+    answer: An electronic medical prescription
+    questioned: 0
+  - question: Telemedicine
+    answer: Treatment of ill people by means of telecommunication
+    questioned: 0
+  - question: Medical adherence
+    answer: The degree to which a patient follows a therapy or medical advices
+    questioned: 0
+  - question: Syphillis
+    answer: Disease caught during sexual activity with an infected person
+    questioned: 0
+  - question: Arthritis
+    answer: Condition in which a person joints become painful, swollen and stiff
     questioned: 0

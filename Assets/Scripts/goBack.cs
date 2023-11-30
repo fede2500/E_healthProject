@@ -12,7 +12,7 @@ public class goBack : MonoBehaviour
     {
         data.setMinigamePlayed();
         
-        SceneManager.LoadScene(0);
+        SceneManager.LoadScene("Room");
     }
     
     public void goback()
@@ -20,7 +20,7 @@ public class goBack : MonoBehaviour
         
         data.setMinigamePlayed();
         
-        SceneManager.LoadScene(0);
+        SceneManager.LoadScene("Room");
     }
     
     

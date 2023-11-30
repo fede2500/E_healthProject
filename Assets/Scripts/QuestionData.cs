@@ -19,9 +19,43 @@ public class QuestionData : MonoBehaviour
 
     public List<TMP_Text> answers;
     
+    private static GameData gameDataInstance;
+    
     void Start()
     {
+        gameDataInstance = GameData.getInstance();
+        SetTheQuestions();
         AskQuestion();
+    }
+
+    public void SetTheQuestions()
+    {
+        if (gameDataInstance.getPlayerCluster() == 0)
+        {
+            for (var i = 6; i < questions.questionList.Count(); i++)
+            {
+                questions.questionList[i].questioned = true;
+            }
+        }
+        else  if (gameDataInstance.getPlayerCluster() == 1)
+        {
+            for (var i = 0; i < 6; i++)
+            {
+                questions.questionList[i].questioned = true;
+            }
+
+            for (var i = 12; i < questions.questionList.Count(); i++)
+            {
+                questions.questionList[i].questioned = true;
+            }
+        }
+        else if (gameDataInstance.getPlayerCluster() == 2)
+        {
+            for (var i = 0; i < 12; i++)
+            {
+                questions.questionList[i].questioned = true;
+            }
+        }
     }
 
     public void AskQuestion()
@@ -30,7 +64,7 @@ public class QuestionData : MonoBehaviour
         {
             _questionText.text = string.Empty;
             ClearQuestions();
-            SceneManager.LoadScene("MainMenu");
+            SceneManager.LoadScene("Menu");
             return;
         }
 
@@ -38,17 +72,17 @@ public class QuestionData : MonoBehaviour
         do
         {
             var scoreasint = int.Parse(scores.scoreText.text);
-            if (scoreasint < 50)
+            if (gameDataInstance.getPlayerCluster()==0)
             {
-                randomIndex = UnityEngine.Random.Range(0, 4);
+                randomIndex = UnityEngine.Random.Range(0, 5);
             }
-            else if (scoreasint >= 50 && scoreasint < 100)
+            else if (gameDataInstance.getPlayerCluster()==1)
             {
-                randomIndex = UnityEngine.Random.Range(20, 39);
+                randomIndex = UnityEngine.Random.Range(6, 11);
             }
-            else
+            else if (gameDataInstance.getPlayerCluster()==2)
             {
-                randomIndex = UnityEngine.Random.Range(40, questions.questionList.Count);
+                randomIndex = UnityEngine.Random.Range(12, questions.questionList.Count);
             }
             
         } while (questions.questionList[randomIndex].questioned == true);
