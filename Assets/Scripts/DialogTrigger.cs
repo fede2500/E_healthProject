@@ -43,6 +43,26 @@ public class DialogTrigger : MonoBehaviour
         
     }
     // Start is called before the first frame update
+
+    public void dialogSite()
+    {
+        switch (data.getPlayerCluster())
+        {
+            case 1:
+                dialogue.sentences = new[]
+                {
+                    "Are you sure that’s the right website?",
+                    "Try to have a look to some details: would you share your credit card number wiht a site?"
+                };
+                break;
+            default:
+                dialogue.sentences = new[] { "Are you sure that’s the right website?" };
+                break;
+
+        }
+        
+        FindObjectOfType<DialogManager>().StartDialogue(dialogue);
+    }
     
     private void OnCollisionEnter2D()
     {

@@ -33,7 +33,6 @@ public class SceneManage : MonoBehaviour
         {
             
             data.setPlayerName($"{data.getPlayerName()}");
-            
             dialogue.sentences = new[]
             {
                 "Hi " + data.getPlayerName() + "! I'm sorry you're stuck here to take care of me, but I'm really sick.",
@@ -93,7 +92,6 @@ public class SceneManage : MonoBehaviour
                    "Oh before i forget, The lock on the door isn’t easy, there have been quite some robberies in the neightborhood so i changed it, hope you can unlock it easily, Bye! "
                };
                break;
-           
        }
         
         FindObjectOfType<DialogManager>().StartDialogue(dialogue);

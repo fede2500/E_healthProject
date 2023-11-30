@@ -6,7 +6,7 @@ public class ScoreManager
 {
     private static ScoreManager _scoreManagerInstance;
     private Dictionary<string, int> objectsAmount = new Dictionary<string, int>();
-    private string selectedMedicine;
+    private string selectedMedicine = null;
     
     private ScoreManager() {} 
  
@@ -40,6 +40,7 @@ public class ScoreManager
     }
     public int getSelectedMedicineAmount()
     {
+        if (selectedMedicine == null) return 0;
         if (objectsAmount.ContainsKey(selectedMedicine))
         {
             return objectsAmount[selectedMedicine];

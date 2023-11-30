@@ -12,7 +12,7 @@ public class ScoreManagerMole : MonoBehaviour
     public GameObject goBack;
     public TMPro.TextMeshProUGUI scoreT;
     public TMPro.TextMeshProUGUI timeT;
-    
+    public Dialogue dialogue;
 
     private float startingTime = 60f;
     private float timeRemaining;
@@ -87,10 +87,42 @@ public class ScoreManagerMole : MonoBehaviour
     }
     
     public void GameOver() {
+        GameData data = GameData.getInstance();
         // Stop the game and show the start UI.
         playing = false;
-        gameOver.SetActive(true);
-        goBack.SetActive(true);
+
+        if (score < 30)
+        {
+            switch (data.getPlayerCluster())
+            {
+                case 0:
+                    dialogue.sentences = new[]
+                    {
+                        "Give it another go!",
+                    };
+                        break;
+                case 1:
+                    dialogue.sentences = new[]
+                    {
+                        "I’ve never seen someone score so low!! Come on try again!"
+                    };
+                    break;
+                case 2:
+                    dialogue.sentences = new[]
+                    {
+                       "I know you can do better, come on!"
+                    };
+                    break;
+            }
+            FindObjectOfType<DialogManager>().StartDialogue(dialogue);
+        }
+        else
+        {
+            gameOver.SetActive(true);
+            goBack.SetActive(true);
+        }
+        
+       
     }
 
 

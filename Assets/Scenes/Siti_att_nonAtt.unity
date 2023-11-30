@@ -2031,7 +2031,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 2136521693}
         m_TargetAssemblyTypeName: DialogTrigger, Assembly-CSharp
-        m_MethodName: TriggerDialogue
+        m_MethodName: dialogSite
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
