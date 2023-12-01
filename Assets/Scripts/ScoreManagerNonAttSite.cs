@@ -10,6 +10,7 @@ public class ScoreManagerNonAttSite
     private Dictionary<string, bool> fake_already_checked = new Dictionary<string, bool>();
     
     private ScoreManagerNonAttSite() {} 
+  
  
     public static ScoreManagerNonAttSite getInstance() {
         // Crea l'oggetto solo se NON esiste:
@@ -17,6 +18,7 @@ public class ScoreManagerNonAttSite
         {
             _scoreManagerInstance = new ScoreManagerNonAttSite();
         }
+
         return _scoreManagerInstance;
     }
 
@@ -33,6 +35,13 @@ public class ScoreManagerNonAttSite
     {
         return NCHECKS;
     }
+    
+    public void restart()
+    {
+        fake_already_checked.Clear();
+    }
+
+
 
     public int getActualScore()
     {

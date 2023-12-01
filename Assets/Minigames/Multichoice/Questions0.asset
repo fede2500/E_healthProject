@@ -1,0 +1,35 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 980e67c96398e6b42b583be741e1ee4c, type: 3}
+  m_Name: Questions0
+  m_EditorClassIdentifier: 
+  currentQuestion: 0
+  questionList:
+  - question: Osteoporosis
+    answer: Condition that causes the bones to become weaker and easily broke
+    questioned: 0
+  - question: Impetigo
+    answer: Infectious skin disease in which yellowish areas appear on the body
+    questioned: 0
+  - question: Pubmed
+    answer: Text archive of biomedical life scieces journal literature
+    questioned: 0
+  - question: SnomedCT
+    answer: Sistematic computer processable collection of medical terms
+    questioned: 0
+  - question: Echocardiogram
+    answer: A test using ultrasound to eximine the structure and the functionalty
+      of the heart.
+    questioned: 0
+  - question: Electrocariogram
+    answer: A drawing or electronic image made by an electrocardiograph
+    questioned: 0

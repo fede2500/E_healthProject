@@ -1078,8 +1078,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   questions1: {fileID: 11400000, guid: 03b45d8cf58962f458d64c5a295382b6, type: 2}
-  questions2: {fileID: 11400000, guid: 03b45d8cf58962f458d64c5a295382b6, type: 2}
-  questions3: {fileID: 11400000, guid: 03b45d8cf58962f458d64c5a295382b6, type: 2}
+  questions2: {fileID: 11400000, guid: 32cd80e54bee04749a4c41c2356ef161, type: 2}
+  questions3: {fileID: 11400000, guid: 16efb92a00b899c4098968331182d9c2, type: 2}
   scores: {fileID: 775332576}
   _questionText: {fileID: 1626816511}
   answers:

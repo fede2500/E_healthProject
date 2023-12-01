@@ -49,6 +49,9 @@ public class DialogTrigger : MonoBehaviour
         Debug.Log(data.getPlayerCluster());
         switch (data.getPlayerCluster())
         {
+            case 0:
+                dialogue.sentences = new[] { "<u>Andrea:</u>" + System.Environment.NewLine +System.Environment.NewLine + "Are you sure that’s the right website?" };
+                break;
             case 1:
                 dialogue.sentences = new[]
                 {
@@ -56,9 +59,7 @@ public class DialogTrigger : MonoBehaviour
                     "<u>Andrea:</u>" + System.Environment.NewLine +System.Environment.NewLine +"Try to have a look to some details: would you share your credit card number with a site?"
                 };
                 break;
-            case 0:
-                dialogue.sentences = new[] { "<u>Andrea:</u>" + System.Environment.NewLine +System.Environment.NewLine + "Are you sure that’s the right website?" };
-                break;
+            
             case 2:
                 dialogue.sentences = new[] { "<u>Andrea:</u>" + System.Environment.NewLine +System.Environment.NewLine + "Are you sure that’s the right website?" };
                 break;

@@ -813,8 +813,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   countT: {fileID: 324964185}
   timeT: {fileID: 1258337478}
+  time: {fileID: 1258337476}
   good: {fileID: 607024999}
   goback: {fileID: 1139633274}
+  tryagain: {fileID: 1560413089}
 --- !u!1 &324964183
 GameObject:
   m_ObjectHideFlags: 0
@@ -1621,8 +1623,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   countT: {fileID: 324964185}
   timeT: {fileID: 0}
+  time: {fileID: 0}
   good: {fileID: 607024999}
   goback: {fileID: 1139633274}
+  tryagain: {fileID: 1560413089}
 --- !u!1001 &1076948832
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2233,8 +2237,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   countT: {fileID: 324964185}
   timeT: {fileID: 0}
+  time: {fileID: 0}
   good: {fileID: 607024999}
   goback: {fileID: 1139633274}
+  tryagain: {fileID: 1560413089}
 --- !u!1 &1216450741
 GameObject:
   m_ObjectHideFlags: 0
@@ -2794,8 +2800,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   countT: {fileID: 324964185}
   timeT: {fileID: 0}
+  time: {fileID: 0}
   good: {fileID: 607024999}
   goback: {fileID: 1139633274}
+  tryagain: {fileID: 1560413089}
 --- !u!1 &1560413089
 GameObject:
   m_ObjectHideFlags: 0
@@ -2808,6 +2816,7 @@ GameObject:
   - component: {fileID: 1560413093}
   - component: {fileID: 1560413092}
   - component: {fileID: 1560413091}
+  - component: {fileID: 1560413094}
   m_Layer: 5
   m_Name: TryAgain
   m_TagString: Untagged
@@ -2878,7 +2887,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1560413092}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1560413094}
+        m_TargetAssemblyTypeName: CountNonAtt, Assembly-CSharp
+        m_MethodName: restartGame
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1560413092
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2917,6 +2938,24 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1560413089}
   m_CullTransparentMesh: 1
+--- !u!114 &1560413094
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1560413089}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8bcbfc95110e648498aff4a12320e4ca, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  countT: {fileID: 324964185}
+  timeT: {fileID: 0}
+  time: {fileID: 0}
+  good: {fileID: 607024999}
+  goback: {fileID: 1139633274}
+  tryagain: {fileID: 1560413089}
 --- !u!1001 &1563113083
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3345,8 +3384,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   countT: {fileID: 324964185}
   timeT: {fileID: 0}
+  time: {fileID: 0}
   good: {fileID: 607024999}
   goback: {fileID: 1139633274}
+  tryagain: {fileID: 1560413089}
 --- !u!1 &1879799483
 GameObject:
   m_ObjectHideFlags: 0

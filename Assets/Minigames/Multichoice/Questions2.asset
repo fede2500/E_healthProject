@@ -1,0 +1,34 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 980e67c96398e6b42b583be741e1ee4c, type: 3}
+  m_Name: Questions2
+  m_EditorClassIdentifier: 
+  currentQuestion: 0
+  questionList:
+  - question: Sphygmomanometer
+    answer: Device for measuring blood pressure
+    questioned: 0
+  - question: E-Prescription
+    answer: An electronic medical prescription
+    questioned: 0
+  - question: Telemedicine
+    answer: Treatment of ill people by means of telecommunication
+    questioned: 0
+  - question: Medical adherence
+    answer: The degree to which a patient follows a therapy or medical advices
+    questioned: 0
+  - question: Syphillis
+    answer: Disease caught during sexual activity with an infected person
+    questioned: 0
+  - question: Arthritis
+    answer: Condition in which a person joints become painful, swollen and stiff
+    questioned: 0

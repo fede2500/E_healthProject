@@ -1,0 +1,35 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 980e67c96398e6b42b583be741e1ee4c, type: 3}
+  m_Name: Questions1
+  m_EditorClassIdentifier: 
+  currentQuestion: 0
+  questionList:
+  - question: Caffeine
+    answer: A stimolant substance found in coffe and tea
+    questioned: 0
+  - question: Paracetamol
+    answer: A drug used to reduce pain
+    questioned: 0
+  - question: Cardiac problem
+    answer: Heart related problem
+    questioned: 0
+  - question: Catheterize bladder
+    answer: Put a tube where the urine comes out
+    questioned: 0
+  - question: 'Electronic Health Record (EHR):'
+    answer: Collection of a patient medical data that can be shared across different
+      healthcare settings
+    questioned: 0
+  - question: Haemorrage
+    answer: Large flow of blood from a damged blood vessel
+    questioned: 0
