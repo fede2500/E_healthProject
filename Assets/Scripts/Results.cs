@@ -7,7 +7,10 @@ using UnityEngine.UI;
 
 public class Result : MonoBehaviour
 {
-    public Questions questions;
+    public Questions questions1;
+    public Questions questions2;
+    public Questions questions3;
+    private Questions actualQuestions;
     public GameObject correctSprite;
     public GameObject incorrectSprite;
 
@@ -16,26 +19,41 @@ public class Result : MonoBehaviour
     public List<Button> possibleanswers;
 
     public UnityEvent onNextQuestion;
+    private static GameData gameDataInstance;
     void Start()
     {
+        gameDataInstance = GameData.getInstance();
         correctSprite.SetActive(false);
         incorrectSprite.SetActive(false);
+        switch (gameDataInstance.getPlayerCluster())
+        {
+            case 0:
+                actualQuestions = questions1;
+                break;
+            case 1:
+                actualQuestions = questions2;
+                break;
+            case 2:
+                actualQuestions = questions3; 
+                break;
+                    
+        }
     }
 
     public void ShowResults(TMP_Text answer)
     {
-        correctSprite.SetActive(questions.questionList[questions.currentQuestion].answer == answer.text);
-        incorrectSprite.SetActive(questions.questionList[questions.currentQuestion].answer != answer.text);
+        correctSprite.SetActive(actualQuestions.questionList[actualQuestions.currentQuestion].answer == answer.text);
+        incorrectSprite.SetActive(actualQuestions.questionList[actualQuestions.currentQuestion].answer != answer.text);
 
-        if (questions.questionList[questions.currentQuestion].answer == answer.text)
+        if (actualQuestions.questionList[actualQuestions.currentQuestion].answer == answer.text)
         {
             scores.AddScore();
-            questions.questionList[questions.currentQuestion].questioned = true;
+            actualQuestions.questionList[actualQuestions.currentQuestion].questioned = true;
         }
         else
         {
             scores.DeductScore();
-            questions.questionList[questions.currentQuestion].questioned = false;
+            actualQuestions.questionList[actualQuestions.currentQuestion].questioned = false;
         }
 
         for (var i = 0; i < 4; i++)

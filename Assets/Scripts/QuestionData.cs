@@ -11,7 +11,10 @@ using UnityEngine.UIElements;
 
 public class QuestionData : MonoBehaviour
 {
-    public Questions questions;
+    public Questions questions1;
+    public Questions questions2;
+    public Questions questions3;
+    private Questions actualQuestions;
     public Scores scores;
 
     [SerializeField]
@@ -25,38 +28,20 @@ public class QuestionData : MonoBehaviour
     {
         gameDataInstance = GameData.getInstance();
         gameDataInstance.setPlayerCluster(1);
-        SetTheQuestions();
+        switch (gameDataInstance.getPlayerCluster())
+        {
+            case 0:
+                actualQuestions = questions1;
+                break;
+            case 1:
+                actualQuestions = questions2;
+                break;
+            case 2:
+                actualQuestions = questions3; 
+                break;
+                    
+        }
         AskQuestion();
-    }
-
-    public void SetTheQuestions()
-    {
-        if (gameDataInstance.getPlayerCluster() == 0)
-        {
-            for (var i = 6; i < 18; i++)
-            {
-                questions.questionList[i].questioned = true;
-            }
-        }
-        else  if (gameDataInstance.getPlayerCluster() == 1)
-        {
-            for (var i = 0; i < 6; i++)
-            {
-                questions.questionList[i].questioned = true;
-            }
-
-            for (var i = 12; i < 18; i++)
-            {
-                questions.questionList[i].questioned = true;
-            }
-        }
-        else if (gameDataInstance.getPlayerCluster() == 2)
-        {
-            for (var i = 0; i < 12; i++)
-            {
-                questions.questionList[i].questioned = true;
-            }
-        }
     }
 
     public void AskQuestion()
@@ -73,23 +58,12 @@ public class QuestionData : MonoBehaviour
         do
         {
             var scoreasint =  int.Parse(scores.scoreText.text);
-            if (gameDataInstance.getPlayerCluster()==0)
-            {
-                randomIndex = UnityEngine.Random.Range(0, 5);
-            }
-            else if (gameDataInstance.getPlayerCluster()==1)
-            {
-                randomIndex = UnityEngine.Random.Range(6, 11);
-            }
-            else if (gameDataInstance.getPlayerCluster()==2)
-            {
-                randomIndex = UnityEngine.Random.Range(12, questions.questionList.Count);
-            }
+            randomIndex = UnityEngine.Random.Range(0, actualQuestions.questionList.Count);
             
-        } while (questions.questionList[randomIndex].questioned == true);
+        } while (actualQuestions.questionList[randomIndex].questioned == true);
 
-        questions.currentQuestion = randomIndex;
-        _questionText.text = questions.questionList[questions.currentQuestion].question;
+        actualQuestions.currentQuestion = randomIndex;
+        _questionText.text = actualQuestions.questionList[actualQuestions.currentQuestion].question;
         
         var randomanswer = UnityEngine.Random.Range(0, 3);
 
@@ -101,7 +75,7 @@ public class QuestionData : MonoBehaviour
             {
                 do
                 {
-                   temp = UnityEngine.Random.Range(0, questions.questionList.Count());
+                   temp = UnityEngine.Random.Range(0, actualQuestions.questionList.Count());
                 } while (random.Contains(temp));
 
                 random.Insert(i, temp);
@@ -111,15 +85,15 @@ public class QuestionData : MonoBehaviour
                 random.Insert(i, randomIndex);
             }
         }
-        answers[0].text = questions.questionList[random[0]].answer;
-        answers[1].text = questions.questionList[random[1]].answer;
-        answers[2].text = questions.questionList[random[2]].answer;
-        answers[3].text = questions.questionList[random[3]].answer;
+        answers[0].text = actualQuestions.questionList[random[0]].answer;
+        answers[1].text = actualQuestions.questionList[random[1]].answer;
+        answers[2].text = actualQuestions.questionList[random[2]].answer;
+        answers[3].text = actualQuestions.questionList[random[3]].answer;
     }
 
     public void ClearQuestions()
     {
-        foreach (var question in questions.questionList)
+        foreach (var question in actualQuestions.questionList)
         {
             question.questioned = false;
         }
@@ -128,7 +102,7 @@ public class QuestionData : MonoBehaviour
     {
         int validQuestion = 0;
 
-        foreach (var question in questions.questionList)
+        foreach (var question in actualQuestions.questionList)
         {
             if (question.questioned == false)
             {

@@ -1077,7 +1077,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6b24ab3ad93ae5142acda8e4baf3a428, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  questions: {fileID: 11400000, guid: 03b45d8cf58962f458d64c5a295382b6, type: 2}
+  questions1: {fileID: 11400000, guid: 03b45d8cf58962f458d64c5a295382b6, type: 2}
+  questions2: {fileID: 11400000, guid: 03b45d8cf58962f458d64c5a295382b6, type: 2}
+  questions3: {fileID: 11400000, guid: 03b45d8cf58962f458d64c5a295382b6, type: 2}
   scores: {fileID: 775332576}
   _questionText: {fileID: 1626816511}
   answers:
@@ -1404,7 +1406,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 170b882f7e5286a4ca27194e3155daf2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  questions: {fileID: 11400000, guid: 03b45d8cf58962f458d64c5a295382b6, type: 2}
+  questions1: {fileID: 11400000, guid: 03b45d8cf58962f458d64c5a295382b6, type: 2}
+  questions2: {fileID: 11400000, guid: 03b45d8cf58962f458d64c5a295382b6, type: 2}
+  questions3: {fileID: 11400000, guid: 03b45d8cf58962f458d64c5a295382b6, type: 2}
   correctSprite: {fileID: 1675792242}
   incorrectSprite: {fileID: 712007448}
   scores: {fileID: 775332576}

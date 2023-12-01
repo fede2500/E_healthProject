@@ -46,17 +46,21 @@ public class DialogTrigger : MonoBehaviour
 
     public void dialogSite()
     {
+        Debug.Log(data.getPlayerCluster());
         switch (data.getPlayerCluster())
         {
             case 1:
                 dialogue.sentences = new[]
                 {
-                    "Are you sure that’s the right website?",
-                    "Try to have a look to some details: would you share your credit card number wiht a site?"
+                    "<u>Andrea:</u>" + System.Environment.NewLine +System.Environment.NewLine +"Are you sure that’s the right website?",
+                    "<u>Andrea:</u>" + System.Environment.NewLine +System.Environment.NewLine +"Try to have a look to some details: would you share your credit card number with a site?"
                 };
                 break;
-            default:
-                dialogue.sentences = new[] { "Are you sure that’s the right website?" };
+            case 0:
+                dialogue.sentences = new[] { "<u>Andrea:</u>" + System.Environment.NewLine +System.Environment.NewLine + "Are you sure that’s the right website?" };
+                break;
+            case 2:
+                dialogue.sentences = new[] { "<u>Andrea:</u>" + System.Environment.NewLine +System.Environment.NewLine + "Are you sure that’s the right website?" };
                 break;
 
         }

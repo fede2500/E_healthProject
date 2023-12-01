@@ -2104,8 +2104,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogue:
-    sentences:
-    - "Are you sure that\u2019s the right website?"
+    sentences: []
 --- !u!1001 &3245743150894692543
 PrefabInstance:
   m_ObjectHideFlags: 0
