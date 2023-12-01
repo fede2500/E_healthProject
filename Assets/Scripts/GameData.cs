@@ -13,6 +13,7 @@ public class GameData
     private string precObjMinigame;
     private Dictionary<string, bool> minigame_played_status = new Dictionary<string, bool>();
     public Vector2 player = Vector2.zero;
+    private int moleplayed = 0;
     
 
     private List<string> gameOrder = new List<string>()
@@ -135,6 +136,16 @@ public class GameData
     public int getPlayerCluster()
     {
         return playerCluster;
+    }
+    
+    public void setMolePlayed(int mole)
+    {
+        moleplayed = mole;
+    }
+    
+    public int getMolePlayed()
+    {
+        return moleplayed;
     }
     
     

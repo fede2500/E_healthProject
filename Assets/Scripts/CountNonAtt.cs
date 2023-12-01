@@ -53,7 +53,7 @@ public class CountNonAtt : MonoBehaviour
                     timeRemaining -= Time.deltaTime;
                 }
 
-                countT.text = countT.text = $"{_scoreManagerNonAttSite.getActualScore()}";
+                
                 if (timeRemaining <= 0)
                 {
 
@@ -77,6 +77,8 @@ public class CountNonAtt : MonoBehaviour
                 break;
 
         }
+        
+        countT.text = countT.text = $"{_scoreManagerNonAttSite.getActualScore()}";
         
         
         if (_scoreManagerNonAttSite.getActualScore() == 0)

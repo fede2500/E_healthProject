@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEditor;
 using UnityEditor.UI;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Mole : MonoBehaviour
 {
@@ -19,7 +20,7 @@ public class Mole : MonoBehaviour
     private Vector2 end = Vector2.zero;
     public float showDuration = 0.5f;
     private float duration = 1f;
-    private float bombRate = 0.25f;
+    private float bombRate = 0.35f;
     private int moleIndex = 0;
     
     private SpriteRenderer spriteRenderer;
@@ -159,6 +160,11 @@ public class Mole : MonoBehaviour
     public void SetIndex(int index)
     {
         moleIndex = index;
+    }
+    
+    public void restartGame()
+    {
+        SceneManager.LoadScene("Profiling_anx _pix");
     }
     
    

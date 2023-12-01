@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class ScoreManagerMole : MonoBehaviour
@@ -10,10 +11,12 @@ public class ScoreManagerMole : MonoBehaviour
     public GameObject gameUI;
     public GameObject gameOver;
     public GameObject goBack;
+    public GameObject tryagain;
     public TMPro.TextMeshProUGUI scoreT;
     public TMPro.TextMeshProUGUI timeT;
     public Dialogue dialogue;
-
+    
+    
     private float startingTime = 60f;
     private float timeRemaining;
     
@@ -25,6 +28,17 @@ public class ScoreManagerMole : MonoBehaviour
     {
         yield return new WaitForSeconds(3f);
         playButton.SetActive(true);
+        GameData data = GameData.getInstance();
+        switch (data.getPlayerCluster())
+        {
+            case 0:
+                startingTime = 60f+data.getMolePlayed()*30f;
+                break;
+            default:
+                break;
+                    
+        }
+        
     }
     
     public void StartGame()
@@ -32,6 +46,7 @@ public class ScoreManagerMole : MonoBehaviour
         playButton.SetActive(false);
         gameOver.SetActive(false);
         goBack.SetActive(false);
+        tryagain.SetActive(false);
         gameUI.SetActive(true);
         
         for (int i = 0; i < moles.Count; i++) {
@@ -100,21 +115,26 @@ public class ScoreManagerMole : MonoBehaviour
                     {
                         "Give it another go!",
                     };
+                    tryagain.SetActive(true);
                         break;
                 case 1:
                     dialogue.sentences = new[]
                     {
                         "I’ve never seen someone score so low!! Come on try again!"
                     };
+                    tryagain.SetActive(true);
                     break;
                 case 2:
                     dialogue.sentences = new[]
                     {
                        "I know you can do better, come on!"
                     };
+                    tryagain.SetActive(true);
                     break;
             }
             FindObjectOfType<DialogManager>().StartDialogue(dialogue);
+
+            data.setMolePlayed(data.getMolePlayed() + 1);
         }
         else
         {
