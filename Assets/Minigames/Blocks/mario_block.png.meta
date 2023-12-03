@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: c1b3a4adb77a6f340b31db6815846c44
+guid: 5199dc2235ecc814b91015217f3d50d8
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 3957881396356489466
-    second: Furniture_props_cop_0
+      213: 6596650918770628359
+    second: mario_block_0
   externalObjects: {}
   serializedVersion: 12
   mipmaps:
@@ -110,13 +110,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Furniture_props_cop_0
+      name: mario_block_0
       rect:
         serializedVersion: 2
-        x: 1
+        x: 0
         y: 0
-        width: 30
-        height: 23
+        width: 160
+        height: 160
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -124,8 +124,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: af0a4f409283de630800000000000000
-      internalID: 3957881396356489466
+      spriteID: 707d3906f030c8b50800000000000000
+      internalID: 6596650918770628359
       vertices: []
       indices: 
       edges: []
@@ -140,8 +140,7 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable:
-      Furniture_props_cop_0: 3957881396356489466
+    nameFileIdTable: {}
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
