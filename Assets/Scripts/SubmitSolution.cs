@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
@@ -7,9 +8,16 @@ public class SubmitSolution : MonoBehaviour
 {
     private ScoreManager _scoreManager = ScoreManager.getInstance();
     private bool correct = false;
-    public TextMeshProUGUI textToShow;
+    public TextMeshProUGUI textToShow, receptText;
     public GameObject end;
-  
+    private GameData data;
+    private int attempts = 0;
+
+    private void Start()
+    {
+        data = GameData.getInstance();
+    }
+
     private void OnMouseDown()
     {
         textToShow.gameObject.SetActive(true);
@@ -26,7 +34,25 @@ public class SubmitSolution : MonoBehaviour
         }
         else
         {
-            textToShow.SetText("Try Again!");
+            if (data.getPlayerCluster() == 2)
+            {
+                if (attempts == 0)
+                {
+                    textToShow.SetText("Try Again! Remember: it is almost lunch time");
+                    attempts++;
+                }
+                else
+                {
+                    textToShow.SetText("Try Again! Remember: it is almost lunch time");
+                    receptText.SetText("\"Take 70 mg of creedoxin twice a day, <u>after meals</u>. Thereafter, take 85 mg of pokevitamin twice a day <u>before meals</u>. Finally, take 50 mg of laytonium every day, 30 minutes <u>before a meal.</u>\";");
+                    
+                }
+            }
+            else
+            {
+                textToShow.SetText("Try Again!");
+            }
+            
             
         }
     }
