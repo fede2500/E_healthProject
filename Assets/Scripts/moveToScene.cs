@@ -47,7 +47,7 @@ public class moveToScene : MonoBehaviour
                     break;
                 case "Door":
 
-                    asyncLoad = SceneManager.LoadSceneAsync("BlocksScene");
+                    asyncLoad = SceneManager.LoadSceneAsync("Blocks");
                     break;
 
             }

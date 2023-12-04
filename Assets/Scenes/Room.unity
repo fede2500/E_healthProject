@@ -1386,8 +1386,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8710c35d33967624fa3ab8ab62644da6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hittable: 1
-  obj: {fileID: 613123919}
 --- !u!1 &626192298
 GameObject:
   m_ObjectHideFlags: 0
@@ -2054,8 +2052,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8710c35d33967624fa3ab8ab62644da6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hittable: 1
-  obj: {fileID: 769372260}
 --- !u!1 &772615989
 GameObject:
   m_ObjectHideFlags: 0
@@ -2900,6 +2896,7 @@ GameObject:
   - component: {fileID: 1192845600}
   - component: {fileID: 1192845602}
   - component: {fileID: 1192845603}
+  - component: {fileID: 1192845604}
   m_Layer: 0
   m_Name: Door
   m_TagString: Untagged
@@ -3037,6 +3034,18 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &1192845604
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1192845599}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1eea0a4549677f04bb396e664b272fff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1409182908
 GameObject:
   m_ObjectHideFlags: 0
@@ -3238,8 +3247,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8710c35d33967624fa3ab8ab62644da6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hittable: 1
-  obj: {fileID: 1409182908}
 --- !u!1 &1419970824
 GameObject:
   m_ObjectHideFlags: 0
@@ -3440,8 +3447,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8710c35d33967624fa3ab8ab62644da6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hittable: 1
-  obj: {fileID: 1419970824}
 --- !u!1 &1446014948
 GameObject:
   m_ObjectHideFlags: 0

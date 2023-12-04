@@ -21,7 +21,8 @@ public class GameData
         "Computer",
         "TV",
         "Locker",
-        "Bookshelf"
+        "Bookshelf",
+        "Door"
     };
     
     private GameData() {} 

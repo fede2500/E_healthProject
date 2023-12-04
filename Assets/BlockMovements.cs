@@ -1,23 +1,10 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
-using TMPro;
 using UnityEngine;
 
 public class BlockMovements : MonoBehaviour
 {
-    public TextMeshProUGUI textToShow, timeT;
     public Collider2D finishBlock;
     private bool isSelected = false;
-    public GameObject goBack, tryAgain;
     
-    private float startingTime = 5f;
-    private float timeRemaining;
-
-    private void Start()
-    {
-        timeRemaining = startingTime;
-    }
 
     void OnMouseDown()
     {
@@ -39,23 +26,7 @@ public class BlockMovements : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (timeRemaining > 0)
-        {
-            timeRemaining -= Time.deltaTime;
-        }
-        else
-        {
-            tryAgain.SetActive(true);
-            gameObject.SetActive(false);
-            textToShow.text = "TRY AGAIN!";
-            textToShow.gameObject.SetActive(true);
-        }
-        timeT.text = $"{(int)timeRemaining / 60}:{(int)timeRemaining % 60:D2}";
 
-        
-        
-        
-        
         if (isSelected)
         {
             // Salva la posizione attuale prima del movimento
@@ -95,16 +66,9 @@ public class BlockMovements : MonoBehaviour
             foreach (Collider2D altroCollider in colliderAltriBlocchi)
             {
                 
-                if( gameObject.name.Equals("Sphere") && altroCollider.Equals(finishBlock))
-                {
-                    textToShow.text = "YOU WIN!";
-                    textToShow.gameObject.SetActive(true);
-                    goBack.SetActive(true);
-                    break;
-                }
-                
-             
-                if (altroCollider != colliderAttuale && !altroCollider.Equals(finishBlock))
+                if (altroCollider != colliderAttuale && 
+                    !altroCollider.Equals(finishBlock) &&
+                    !altroCollider.tag.Equals("Checkpoint"))
                 {
                     // Se c'è sovrapposizione, annulla il movimento
                     transform.position = posizioneAttuale;
