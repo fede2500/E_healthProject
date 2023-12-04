@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Threading;
@@ -53,11 +54,12 @@ public class DialogTrigger : MonoBehaviour
                 dialogue.sentences = new[] { "<u>Andrea:</u>" + System.Environment.NewLine +System.Environment.NewLine + "Are you sure that’s the right website?" };
                 break;
             case 1:
+                
                 dialogue.sentences = new[]
                 {
                     "<u>Andrea:</u>" + System.Environment.NewLine +System.Environment.NewLine +"Are you sure that’s the right website?",
                     "<u>Andrea:</u>" + System.Environment.NewLine +System.Environment.NewLine +"Try to have a look to some details: would you share your credit card number with a site?"
-                };
+               };
                 break;
             
             case 2:
@@ -73,10 +75,5 @@ public class DialogTrigger : MonoBehaviour
     {
             TriggerDialogue();
     }
-
-    // Update is called once per frame
-    void Start()
-    {
-        
-    }
+    
 }
