@@ -20,7 +20,6 @@ public class SubmitSolution : MonoBehaviour
 
     private void OnMouseDown()
     {
-        textToShow.gameObject.SetActive(true);
         if (_scoreManager.getObjectAmount("CogniPik") == 2 && 
             _scoreManager.getObjectAmount("EnigVive") == 1 &&
             _scoreManager.getObjectAmount("Pikachewil") == 1 &&
@@ -30,7 +29,6 @@ public class SubmitSolution : MonoBehaviour
             )
         {
             textToShow.SetText("You win!");
-            end.SetActive(true);
         }
         else
         {

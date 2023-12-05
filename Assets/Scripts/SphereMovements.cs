@@ -10,7 +10,7 @@ public class SphereMovements : MonoBehaviour
     public Collider2D finishBlock;
     private bool isSelected = false;
     private bool isMoved = false;
-    public GameObject goBack, tryAgain;
+    public GameObject goBack, tryAgain, tutorial;
 
     
     private GameData data;
@@ -23,17 +23,21 @@ public class SphereMovements : MonoBehaviour
 
     void OnMouseDown()
     {
-        isSelected = !isSelected; // Quando il blocco viene cliccato, diventa selezionato
+        if (!tutorial.activeSelf)
+        {
+            isSelected = !isSelected; // Quando il blocco viene cliccato, diventa selezionato
         
-        if (isSelected)
-        {
-            // Imposta il blocco come "cliccato" e non consente il clic su altri blocchi
-            this.GetComponent<SpriteRenderer>().color = Color.red;
+            if (isSelected)
+            {
+                // Imposta il blocco come "cliccato" e non consente il clic su altri blocchi
+                this.GetComponent<SpriteRenderer>().color = Color.red;
+            }
+            else
+            {
+                this.GetComponent<SpriteRenderer>().color = Color.blue;
+            }
         }
-        else
-        {
-            this.GetComponent<SpriteRenderer>().color = Color.blue;
-        }
+      
     }
 
     
@@ -43,7 +47,7 @@ public class SphereMovements : MonoBehaviour
     {
         isMoved = false;
 
-        if (isSelected)
+        if (isSelected && !tutorial.activeSelf)
         {
             // Salva la posizione attuale prima del movimento
             Vector2 posizioneAttuale = transform.position;
@@ -117,20 +121,24 @@ public class SphereMovements : MonoBehaviour
             }
             
         }
+
+        if (!tutorial.activeSelf)
+        {
+            if (timeRemaining > 0)
+            {
+                timeRemaining -= Time.deltaTime;
+            }
+            else
+            {
+                tryAgain.SetActive(true);
+                gameObject.SetActive(false);
+                textToShow.text = "TRY AGAIN!";
+                textToShow.gameObject.SetActive(true);
+            }
+            timeT.text = $"{(int)timeRemaining / 60}:{(int)timeRemaining % 60:D2}";
+        }
         
         
-        if (timeRemaining > 0)
-        {
-            timeRemaining -= Time.deltaTime;
-        }
-        else
-        {
-            tryAgain.SetActive(true);
-            gameObject.SetActive(false);
-            textToShow.text = "TRY AGAIN!";
-            textToShow.gameObject.SetActive(true);
-        }
-        timeT.text = $"{(int)timeRemaining / 60}:{(int)timeRemaining % 60:D2}";
     }
     
 }

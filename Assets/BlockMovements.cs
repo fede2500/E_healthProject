@@ -4,21 +4,27 @@ public class BlockMovements : MonoBehaviour
 {
     public Collider2D finishBlock;
     private bool isSelected = false;
+    public GameObject tutorial;
     
 
     void OnMouseDown()
     {
-        isSelected = !isSelected; // Quando il blocco viene cliccato, diventa selezionato
+        if (!tutorial.activeSelf)
+        {
+            isSelected = !isSelected; // Quando il blocco viene cliccato, diventa selezionato
         
-        if (isSelected)
-        {
-            // Imposta il blocco come "cliccato" e non consente il clic su altri blocchi
-            this.GetComponent<SpriteRenderer>().color = Color.red;
+            if (isSelected)
+            {
+                // Imposta il blocco come "cliccato" e non consente il clic su altri blocchi
+                this.GetComponent<SpriteRenderer>().color = Color.red;
+            }
+            else
+            {
+                this.GetComponent<SpriteRenderer>().color = Color.blue;
+            }
         }
-        else
-        {
-            this.GetComponent<SpriteRenderer>().color = Color.blue;
-        }
+        
+       
     }
 
     
@@ -27,7 +33,7 @@ public class BlockMovements : MonoBehaviour
     void Update()
     {
 
-        if (isSelected)
+        if (isSelected && !tutorial.activeSelf)
         {
             // Salva la posizione attuale prima del movimento
             Vector2 posizioneAttuale = transform.position;
