@@ -71,6 +71,8 @@ public class DialogTrigger : MonoBehaviour
         FindObjectOfType<DialogManager>().StartDialogue(dialogue);
     }
     
+   
+    
     private void OnCollisionEnter2D()
     {
             TriggerDialogue();

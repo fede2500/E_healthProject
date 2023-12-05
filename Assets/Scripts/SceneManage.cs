@@ -47,8 +47,8 @@ public class SceneManage : MonoBehaviour
                {
                    "<u>Andrea:</u>" + System.Environment.NewLine + System.Environment.NewLine +"So when is it? ",
                    $"<u>{data.getPlayerName()}:</u>" + System.Environment.NewLine+ System.Environment.NewLine +"Tomorrow at 10:30 a.m.",
-                   "<u>Andrea:</u>" + System.Environment.NewLine + System.Environment.NewLine +"Thank you " + data.getPlayerName() +", now could you switch on the tv please?",
-                   "<u>Andrea:</u>" + System.Environment.NewLine + System.Environment.NewLine +"I’d love to watch the never ending show."
+                   "<u>Andrea:</u>" + System.Environment.NewLine + System.Environment.NewLine +"Thank you " + data.getPlayerName() +", now could you switch on the tv please? I’d love to watch the Never Ending Show.",
+                   "<u>Andrea:</u>" + System.Environment.NewLine + System.Environment.NewLine +"Oh my God! Look at that old joystick! Before putting on my show, try to play at some videogames to see if it still works."
                };
                break;
            case "TV":

@@ -32,7 +32,7 @@ public class ScoreManagerMole : MonoBehaviour
         switch (data.getPlayerCluster())
         {
             case 0:
-                startingTime = 60f+data.getMolePlayed()*30f;
+                startingTime = 60f+data.getMolePlayed()*10f;
                 break;
             default:
                 break;
@@ -106,14 +106,15 @@ public class ScoreManagerMole : MonoBehaviour
         // Stop the game and show the start UI.
         playing = false;
 
-        if (score < 30)
+        if (score < 50)
         {
             switch (data.getPlayerCluster())
             {
                 case 0:
                     dialogue.sentences = new[]
                     {
-                        "Give it another go!",
+                        "Your score is a little low! Try to calm down and don't panic when too much moles are appearing on the screen. Focus only on the right moles and avoid the bombs without being impulsive." +
+                        "Some extra time will be given to help you relax a little while playing! Just focus on your aim to perform the best as you can and reach an higher score than before.",
                     };
                     tryagain.SetActive(true);
                         break;
@@ -149,7 +150,7 @@ public class ScoreManagerMole : MonoBehaviour
 
     public void AddScore(int moleIndex) {
         // Add and update score.
-        score += 3;
+        score += 1;
         scoreT.text = $"{score}";
         
         // Remove from active moles.
@@ -158,7 +159,7 @@ public class ScoreManagerMole : MonoBehaviour
     
     public void RemoveScore(int moleIndex) {
         // Add and update score.
-        score -= 5;
+        score -= 2;
         if (score < 0)
         {
             score = 0;
