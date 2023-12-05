@@ -14,6 +14,7 @@ public class GameData
     private Dictionary<string, bool> minigame_played_status = new Dictionary<string, bool>();
     public Vector2 player = Vector2.zero;
     private int moleplayed = 0;
+    private bool quizplayed = false;
     
 
     private List<string> gameOrder = new List<string>()
@@ -148,6 +149,17 @@ public class GameData
     {
         return moleplayed;
     }
+    
+    public void setQuizPlayed(bool quiz)
+    {
+        quizplayed = quiz;
+    }
+    public bool getQuizPlayed()
+    {
+        return quizplayed;
+    }
+    
+   
     
     
     // Start is called before the first frame update

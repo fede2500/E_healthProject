@@ -11,6 +11,7 @@ public class ScoreManagerMole : MonoBehaviour
     public GameObject gameUI;
     public GameObject gameOver;
     public GameObject goBack;
+    public GameObject good;
     public GameObject tryagain;
     public TMPro.TextMeshProUGUI scoreT;
     public TMPro.TextMeshProUGUI timeT;
@@ -76,7 +77,7 @@ public class ScoreManagerMole : MonoBehaviour
             timeT.text = $"{(int)timeRemaining / 60}:{(int)timeRemaining % 60:D2}";
             
             // Check if we need to start any more moles.
-            if (currentMoles.Count <= score/30) {
+            if (currentMoles.Count <= score/10) {
                 // Choose a random mole.
                 int index = Random.Range(0, 9);
                 // Doesn't matter if it's already doing something, we'll just try again next frame.
@@ -84,11 +85,11 @@ public class ScoreManagerMole : MonoBehaviour
                     currentMoles.Add(moles[index]);
                     if (timeRemaining < 30f)
                     {
-                        moles[index].Activate((score/30)*5);
+                        moles[index].Activate((score/10)*2);
                     }
                     else
                     {
-                        moles[index].Activate(score/30);
+                        moles[index].Activate(score/10);
                     }
                 }
             }
@@ -106,7 +107,7 @@ public class ScoreManagerMole : MonoBehaviour
         // Stop the game and show the start UI.
         playing = false;
 
-        if (score < 50)
+        if (score < 30)
         {
             switch (data.getPlayerCluster())
             {
@@ -141,6 +142,8 @@ public class ScoreManagerMole : MonoBehaviour
         {
             gameOver.SetActive(true);
             goBack.SetActive(true);
+            good.SetActive(true);
+            
         }
         
        

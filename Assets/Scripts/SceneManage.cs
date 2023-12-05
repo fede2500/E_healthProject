@@ -81,7 +81,7 @@ public class SceneManage : MonoBehaviour
                {
                    "<u>Andrea:</u>" + System.Environment.NewLine +System.Environment.NewLine +"Thank you for bringing me the pills, You know what would be awesome right now?",
                    "<u>Andrea:</u>" + System.Environment.NewLine +System.Environment.NewLine +"An amazing book, could you take one from the bookshelves over there?",
-                   $"<u>{data.getPlayerName():</u>}" + System.Environment.NewLine +System.Environment.NewLine +"What kind of book would you like to read?",
+                   $"<u>{data.getPlayerName()}:</u>" + System.Environment.NewLine +System.Environment.NewLine +"What kind of book would you like to read?",
                    "<u>Andrea:</u>" + System.Environment.NewLine +System.Environment.NewLine +"You pick, surprise me!"
                };
                break;

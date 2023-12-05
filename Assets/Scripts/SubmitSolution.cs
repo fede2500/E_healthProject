@@ -29,6 +29,7 @@ public class SubmitSolution : MonoBehaviour
             )
         {
             textToShow.SetText("You win!");
+            end.SetActive(true);
         }
         else
         {

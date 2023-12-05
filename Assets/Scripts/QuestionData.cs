@@ -27,7 +27,6 @@ public class QuestionData : MonoBehaviour
     void Start()
     {
         gameDataInstance = GameData.getInstance();
-        gameDataInstance.setPlayerCluster(1);
         switch (gameDataInstance.getPlayerCluster())
         {
             case 0:
@@ -50,6 +49,7 @@ public class QuestionData : MonoBehaviour
         {
             _questionText.text = string.Empty;
             ClearQuestions();
+            gameDataInstance.setQuizPlayed(true);
             SceneManager.LoadScene("Menu");
             return;
         }

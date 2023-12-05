@@ -42,7 +42,7 @@ public class moveToScene : MonoBehaviour
                     asyncLoad = SceneManager.LoadSceneAsync("PharmaScene");
                     break;
                 case "Bookshelf":
-
+                    data.setQuizPlayed(false);
                     asyncLoad = SceneManager.LoadSceneAsync("Menu");
                     break;
                 case "Door":

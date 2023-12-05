@@ -1,0 +1,362 @@
+fileFormatVersion: 2
+guid: 9f5eeae005416dc4b93224ea77e3c808
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 6116820139844397151
+    second: botsmatic-demo 1_0
+  - first:
+      213: 3171904845715245426
+    second: botsmatic-demo 1_1
+  - first:
+      213: -8767953211773183912
+    second: botsmatic-demo 1_2
+  - first:
+      213: -5096880222750350911
+    second: botsmatic-demo 1_3
+  - first:
+      213: -189445212910309429
+    second: botsmatic-demo 1_4
+  - first:
+      213: -1412781117876240704
+    second: botsmatic-demo 1_5
+  - first:
+      213: -234884932606868975
+    second: botsmatic-demo 1_6
+  - first:
+      213: 5908325132226005242
+    second: botsmatic-demo 1_7
+  - first:
+      213: 613389703047672911
+    second: botsmatic-demo 1_8
+  - first:
+      213: -8293751672741607116
+    second: botsmatic-demo 1_9
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 1
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: botsmatic-demo 1_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 12
+        width: 118
+        height: 183
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f586166428f43e450800000000000000
+      internalID: 6116820139844397151
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: botsmatic-demo 1_1
+      rect:
+        serializedVersion: 2
+        x: 130
+        y: 14
+        width: 120
+        height: 181
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2798236d6aed40c20800000000000000
+      internalID: 3171904845715245426
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: botsmatic-demo 1_2
+      rect:
+        serializedVersion: 2
+        x: 264
+        y: 12
+        width: 119
+        height: 183
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 858930d2209f15680800000000000000
+      internalID: -8767953211773183912
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: botsmatic-demo 1_3
+      rect:
+        serializedVersion: 2
+        x: 395
+        y: 11
+        width: 59
+        height: 184
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1c1604c117e3449b0800000000000000
+      internalID: -5096880222750350911
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: botsmatic-demo 1_4
+      rect:
+        serializedVersion: 2
+        x: 466
+        y: 13
+        width: 118
+        height: 182
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bcf25142594fe5df0800000000000000
+      internalID: -189445212910309429
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: botsmatic-demo 1_5
+      rect:
+        serializedVersion: 2
+        x: 599
+        y: 0
+        width: 118
+        height: 181
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0ce7b9bfe0bc46ce0800000000000000
+      internalID: -1412781117876240704
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: botsmatic-demo 1_6
+      rect:
+        serializedVersion: 2
+        x: 731
+        y: 0
+        width: 120
+        height: 183
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 11240e4f5658dbcf0800000000000000
+      internalID: -234884932606868975
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: botsmatic-demo 1_7
+      rect:
+        serializedVersion: 2
+        x: 865
+        y: 11
+        width: 120
+        height: 184
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: af808d377669ef150800000000000000
+      internalID: 5908325132226005242
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: botsmatic-demo 1_8
+      rect:
+        serializedVersion: 2
+        x: 997
+        y: 9
+        width: 122
+        height: 186
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f44f90f5fa2338800800000000000000
+      internalID: 613389703047672911
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: botsmatic-demo 1_9
+      rect:
+        serializedVersion: 2
+        x: 1131
+        y: 12
+        width: 116
+        height: 183
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4394feabbcca6ec80800000000000000
+      internalID: -8293751672741607116
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      botsmatic-demo 1_0: 6116820139844397151
+      botsmatic-demo 1_1: 3171904845715245426
+      botsmatic-demo 1_2: -8767953211773183912
+      botsmatic-demo 1_3: -5096880222750350911
+      botsmatic-demo 1_4: -189445212910309429
+      botsmatic-demo 1_5: -1412781117876240704
+      botsmatic-demo 1_6: -234884932606868975
+      botsmatic-demo 1_7: 5908325132226005242
+      botsmatic-demo 1_8: 613389703047672911
+      botsmatic-demo 1_9: -8293751672741607116
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

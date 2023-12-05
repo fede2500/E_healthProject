@@ -33,6 +33,7 @@ public class Personashandler : MonoBehaviour
             questions.currentQuestion = 0;
             ClearQuestions();
             //clus.CalculatingClusters();
+            gameDataInstance.setQuizPlayed(true);
             SceneManager.LoadScene("Room");
             return;
         }
