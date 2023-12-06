@@ -31,7 +31,7 @@ public class SphereMovements : MonoBehaviour
         else
         {
             tutorialText.text =
-                "To leave the room, you must move the ball to the opposite square. Click on a block or the ball to select it; click again to deselect it. Use the arrows to move them. You can move many blocks at once. Try to reach the green checkpoints to get additional time. \nYou have 2 minutes!";
+                "To leave the room, you must move the ball to the opposite square. Click on a block or the ball to select it; click again to deselect it. Use the arrows to move them. You can move many blocks at once. Try to reach the pins to get additional time. \nYou have 2 minutes!";
 
         }
         
