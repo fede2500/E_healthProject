@@ -6,19 +6,35 @@ using UnityEngine;
 
 public class SphereMovements : MonoBehaviour
 {
-    public TextMeshProUGUI textToShow, timeT;
+    public TextMeshProUGUI textToShow, timeT, tutorialText;
     public Collider2D finishBlock;
     private bool isSelected = false;
     private bool isMoved = false;
-    public GameObject goBack, tryAgain, tutorial;
+    public GameObject goBack, tryAgain, tutorial, checkpoint1, checkpoint2, checkpoint3;
 
     
     private GameData data;
-    private float timeRemaining = 120f;
+    private float timeRemaining = 240f;
 
     private void Start()
     {
         data = GameData.getInstance();
+        data.setPlayerCluster(1);
+        if (data.getPlayerCluster() != 0)
+        {
+            checkpoint1.SetActive(false);
+            checkpoint2.SetActive(false);
+            checkpoint3.SetActive(false);
+            tutorialText.text =
+                "To leave the room, you must move the ball to the opposite square. Click on a block or the ball to select it; click again to deselect it. Use the arrows to move them. You can move many blocks at once. \nYou have 2 minutes!";
+        }
+        else
+        {
+            tutorialText.text =
+                "To leave the room, you must move the ball to the opposite square. Click on a block or the ball to select it; click again to deselect it. Use the arrows to move them. You can move many blocks at once. Try to reach the green checkpoints to get additional time. \nYou have 2 minutes!";
+
+        }
+        
     }
 
     void OnMouseDown()
@@ -102,7 +118,7 @@ public class SphereMovements : MonoBehaviour
                     if (data.getPlayerCluster() == 0 && 
                         altroCollider.tag.Equals("Checkpoint"))
                     {
-                        timeRemaining += 30f;
+                        timeRemaining += 60f;
                         textToShow.text = "Checkpoint!";
                         textToShow.gameObject.SetActive(true);
                         altroCollider.gameObject.SetActive(false);

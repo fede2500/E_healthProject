@@ -9,6 +9,7 @@ public class BlockMovements : MonoBehaviour
 
     void OnMouseDown()
     {
+        
         if (!tutorial.activeSelf)
         {
             isSelected = !isSelected; // Quando il blocco viene cliccato, diventa selezionato
