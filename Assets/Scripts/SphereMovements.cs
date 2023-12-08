@@ -10,6 +10,7 @@ public class SphereMovements : MonoBehaviour
     public Collider2D finishBlock;
     private bool isSelected = false;
     private bool isMoved = false;
+    private bool win = false;
     public GameObject goBack, tryAgain, tutorial, checkpoint1, checkpoint2, checkpoint3;
 
     
@@ -112,6 +113,8 @@ public class SphereMovements : MonoBehaviour
                         textToShow.text = "YOU WIN!";
                         textToShow.gameObject.SetActive(true);
                         goBack.SetActive(true);
+                        win = true;
+                        timeRemaining = 0f;
                         break;
                     }
                 
@@ -146,10 +149,14 @@ public class SphereMovements : MonoBehaviour
             }
             else
             {
-                tryAgain.SetActive(true);
-                gameObject.SetActive(false);
-                textToShow.text = "TRY AGAIN!";
-                textToShow.gameObject.SetActive(true);
+                if (!win)
+                {
+                    tryAgain.SetActive(true);
+                    gameObject.SetActive(false);
+                    textToShow.text = "TRY AGAIN!";
+                    textToShow.gameObject.SetActive(true);
+                    timeRemaining = 0f;
+                }
             }
             timeT.text = $"{(int)timeRemaining / 60}:{(int)timeRemaining % 60:D2}";
         }

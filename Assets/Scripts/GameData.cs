@@ -1,19 +1,28 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+[Serializable]
 public class GameData
 {
+    [SerializeField]
     private string playerName;
+    [SerializeField]
     private int playerCluster;
     private int playerAge;
     
     private static GameData gameDataInstance;
+    
+    [SerializeField]
     private string currentObjectMinigame;
-    private string precObjMinigame;
-    private Dictionary<string, bool> minigame_played_status = new Dictionary<string, bool>();
+    [SerializeField]
+    private string precObjMinigame =null;
+    
     public Vector2 player = Vector2.zero;
+    [SerializeField]
     private int moleplayed = 0;
+    [SerializeField]
     private bool quizplayed = false;
     
 
@@ -86,7 +95,7 @@ public class GameData
 
     public bool isNoMinigamePlayed()
     {
-        if (minigame_played_status.Count == 0)
+        if (precObjMinigame == null)
         {
             return true;
         }
@@ -97,9 +106,9 @@ public class GameData
     }
     public bool isMinigamePlayed(string gameObjectName)
     {
-        if (minigame_played_status.ContainsKey(gameObjectName))
+        if(gameOrder.IndexOf(gameObjectName) <= gameOrder.IndexOf(currentObjectMinigame)  )
         {
-            return minigame_played_status[gameObjectName];
+            return true;
         }
         return false;
     }
@@ -111,16 +120,6 @@ public class GameData
 
     public void setMinigamePlayed()
     {
-        if (minigame_played_status.ContainsKey(currentObjectMinigame))
-        {
-            minigame_played_status[currentObjectMinigame] = true;
-            
-        }
-        else
-        {
-            minigame_played_status.Add(currentObjectMinigame, true);
-        }
-
         precObjMinigame = currentObjectMinigame;
     }
 

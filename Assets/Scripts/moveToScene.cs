@@ -10,23 +10,22 @@ using UnityEngine.SceneManagement;
 public class moveToScene : MonoBehaviour
 {
     private bool hittable;
+    GameData data = GameData.getInstance();
+    
 
     private void OnMouseDown()
     {
-
-        GameData data = GameData.getInstance();
-        GameObject playerObj = GameObject.Find("Player");
-
-
-        data.setPlayer(new Vector2(playerObj.transform.position.x, playerObj.transform.position.y));
-        data.setCurrentObjectMinigame(gameObject.name);
-
+        
         hittable = setHittable();
-
-        AsyncOperation asyncLoad;
 
         if (hittable)
         {
+            
+            GameObject playerObj = GameObject.Find("Player");
+            AsyncOperation asyncLoad;
+            data.setPlayer(new Vector2(playerObj.transform.position.x, playerObj.transform.position.y));
+            data.setCurrentObjectMinigame(gameObject.name);
+            
             switch (gameObject.name)
             {
                 case "Computer":
