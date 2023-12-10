@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: efd90f82769a7c74b8d4290133ab2d88
+guid: 33a48175873db8e47b2892475d9b7eee
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 1030057425275831723
-    second: finalScene_0
+      213: -2263787634445232669
+    second: bowlingPin3_0
   externalObjects: {}
   serializedVersion: 12
   mipmaps:
@@ -94,29 +94,17 @@ TextureImporter:
     overridden: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 3
-    buildTarget: Android
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: finalScene_0
+      name: bowlingPin3_0
       rect:
         serializedVersion: 2
-        x: 0
+        x: 9
         y: 0
-        width: 1309
-        height: 1073
+        width: 101
+        height: 251
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -124,8 +112,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: ba5c1d355cf7b4e00800000000000000
-      internalID: 1030057425275831723
+      spriteID: 3e558f9f3296590e0800000000000000
+      internalID: -2263787634445232669
       vertices: []
       indices: 
       edges: []
@@ -140,8 +128,7 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable:
-      finalScene_0: 1030057425275831723
+    nameFileIdTable: {}
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

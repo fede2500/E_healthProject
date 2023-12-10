@@ -20,7 +20,6 @@ public class SphereMovements : MonoBehaviour
     private void Start()
     {
         data = GameData.getInstance();
-        data.setPlayerCluster(1);
         if (data.getPlayerCluster() != 0)
         {
             checkpoint1.SetActive(false);

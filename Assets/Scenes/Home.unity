@@ -1196,9 +1196,9 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 498020089}
-        m_TargetAssemblyTypeName: SceneChanger, Assembly-CSharp
-        m_MethodName: ChangeSceneWithDelay
-        m_Mode: 5
+        m_TargetAssemblyTypeName: Resume, Assembly-CSharp
+        m_MethodName: play
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -1254,9 +1254,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 498020084}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 03f58eea01869c149967af7de1c5635d, type: 3}
+  m_Script: {fileID: 11500000, guid: 799987fac49a413db6f02b454e55957e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  res: {fileID: 0}
 --- !u!1 &511841355
 GameObject:
   m_ObjectHideFlags: 0
@@ -1855,6 +1856,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 799987fac49a413db6f02b454e55957e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  res: {fileID: 720934985}
 --- !u!1 &753552684
 GameObject:
   m_ObjectHideFlags: 0

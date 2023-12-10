@@ -28,8 +28,8 @@ public class SceneManage : MonoBehaviour
             player = data.getPlayer();
             playerObj.transform.position = player;
         }
-        
-       if( data.isNoMinigamePlayed() )
+        Debug.Log(data.isNoMinigamePlayed());
+       if(!data.isMinigamePlayed("Computer"))
         {
             
             data.setPlayerName($"{data.getPlayerName()}");

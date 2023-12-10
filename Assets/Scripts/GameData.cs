@@ -17,7 +17,7 @@ public class GameData
     [SerializeField]
     private string currentObjectMinigame;
     [SerializeField]
-    private string precObjMinigame =null;
+    public string precObjMinigame = null;
     
     public Vector2 player = Vector2.zero;
     [SerializeField]
@@ -41,6 +41,7 @@ public class GameData
         // Crea l'oggetto solo se NON esiste:
         if (gameDataInstance == null) {
             gameDataInstance = new GameData();
+            gameDataInstance.precObjMinigame = null;
         }
         return gameDataInstance;
     }

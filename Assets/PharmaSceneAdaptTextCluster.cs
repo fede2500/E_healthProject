@@ -11,7 +11,7 @@ public class PharmaSceneAdaptTextCluster : MonoBehaviour
         
         switch (data.getPlayerCluster())
         {
-            case 2 :
+            case 1 :
                 textToShow.text = "Take 70 mg of creedoxin twice a day, <u>after meals</u>. Thereafter, take 85 mg of pokevitamin twice a day <u>before meals</u>. Continue by taking 50 mg of  linkazol, 30 minutes <u>before dinner</u>. Finally, take 50 mg of laytonium every day, 30 minutes <u>before a meal.</u>";
             break;
             

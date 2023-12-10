@@ -13,16 +13,30 @@ public class Resume : MonoBehaviour
     private string savePath = "GameData.json";
     
     AsyncOperation asyncLoad;
+    public GameObject res;
     
     private void Start()
     {
         if (!File.Exists(savePath))
         {
-            gameObject.SetActive(false);
+            res.SetActive(false);
         }
      
     }
     
+    public void play()
+    {
+        if (File.Exists(savePath))
+        {
+            File.Delete(savePath);
+            asyncLoad = SceneManager.LoadSceneAsync("Name");
+        }
+        else
+        {
+            asyncLoad = SceneManager.LoadSceneAsync("Name");
+        }
+        
+    }
 
     public void resume()
     {
