@@ -1196,7 +1196,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 498020089}
-        m_TargetAssemblyTypeName: Resume, Assembly-CSharp
+        m_TargetAssemblyTypeName: PlayNewGame, Assembly-CSharp
         m_MethodName: play
         m_Mode: 1
         m_Arguments:
@@ -1254,10 +1254,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 498020084}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 799987fac49a413db6f02b454e55957e, type: 3}
+  m_Script: {fileID: 11500000, guid: 4234e0070ee2488ba9ea798b7693f365, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  res: {fileID: 0}
 --- !u!1 &511841355
 GameObject:
   m_ObjectHideFlags: 0
@@ -1856,7 +1855,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 799987fac49a413db6f02b454e55957e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  res: {fileID: 720934985}
 --- !u!1 &753552684
 GameObject:
   m_ObjectHideFlags: 0
@@ -2420,7 +2418,6 @@ GameObject:
   - component: {fileID: 813393678}
   - component: {fileID: 813393677}
   - component: {fileID: 813393676}
-  - component: {fileID: 813393679}
   - component: {fileID: 813393680}
   - component: {fileID: 813393681}
   m_Layer: 0
@@ -2524,21 +2521,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &813393679
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 813393675}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: aa9fbb077b9606f438f54318a9da045a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  moveSpeed: 5
-  rb: {fileID: 813393676}
-  animator: {fileID: 813393680}
 --- !u!95 &813393680
 Animator:
   serializedVersion: 7
@@ -2971,7 +2953,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1192845601}
   - component: {fileID: 1192845600}
-  - component: {fileID: 1192845602}
   - component: {fileID: 1192845603}
   m_Layer: 0
   m_Name: Door
@@ -3047,23 +3028,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1651716147}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1192845602
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1192845599}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 71091877947fb9145abe7631102f7b91, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  dialogue:
-    sentences:
-    - 'The door is still closed!
-
-'
 --- !u!61 &1192845603
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -3255,9 +3219,7 @@ GameObject:
   - component: {fileID: 1409182910}
   - component: {fileID: 1409182909}
   - component: {fileID: 1409182912}
-  - component: {fileID: 1409182914}
   - component: {fileID: 1409182915}
-  - component: {fileID: 1409182916}
   m_Layer: 0
   m_Name: Computer
   m_TagString: Untagged
@@ -3378,21 +3340,6 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 0.77175367, y: 1.1597723}
   m_EdgeRadius: 0
---- !u!114 &1409182914
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1409182908}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 71091877947fb9145abe7631102f7b91, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  dialogue:
-    sentences:
-    - 
 --- !u!50 &1409182915
 Rigidbody2D:
   serializedVersion: 4
@@ -3420,18 +3367,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!114 &1409182916
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1409182908}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1eea0a4549677f04bb396e664b272fff, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1419970824
 GameObject:
   m_ObjectHideFlags: 0

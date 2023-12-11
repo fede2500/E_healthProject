@@ -772,7 +772,13 @@ PlayerSettings:
   XboxOneOverrideIdentityName: 
   XboxOneOverrideIdentityPublisher: 
   vrEditorSettings: {}
-  cloudServicesEnabled: {}
+  cloudServicesEnabled:
+    Build: 0
+    Game Performance: 0
+    Legacy Analytics: 0
+    Purchasing: 0
+    UDP: 0
+    Unity Ads: 0
   luminIcon:
     m_Name: 
     m_ModelFolderPath: 
@@ -792,11 +798,11 @@ PlayerSettings:
   apiCompatibilityLevel: 6
   activeInputHandler: 0
   windowsGamepadBackendHint: 0
-  cloudProjectId: 598612f7-4b7f-4c7c-bbd6-4ef14ad27cfe
+  cloudProjectId: 6439b3f0-883f-4d86-8c7d-22ebfa716d2e
   framebufferDepthMemorylessMode: 0
   qualitySettingsNames: []
   projectName: EscapeRoom (1)
-  organizationId: eleonorasala
+  organizationId: chrididi
   cloudEnabled: 0
   legacyClampBlendShapeWeights: 0
   hmiLoadingImage: {fileID: 0}

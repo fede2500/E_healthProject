@@ -41,7 +41,14 @@ public class GameData
         // Crea l'oggetto solo se NON esiste:
         if (gameDataInstance == null) {
             gameDataInstance = new GameData();
-            gameDataInstance.precObjMinigame = null;
+        }
+        return gameDataInstance;
+    }
+    
+    public static GameData getInstance(GameData oldGameData) {
+        // Crea l'oggetto solo se NON esiste:
+        if (gameDataInstance == null) {
+            gameDataInstance = oldGameData;
         }
         return gameDataInstance;
     }

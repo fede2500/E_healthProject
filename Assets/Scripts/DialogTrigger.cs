@@ -14,7 +14,7 @@ public class DialogTrigger : MonoBehaviour
         if (data.isMinigamePlayed(gameObject.name))
         {
             //dialogue.sentences = new[] { "You already played this minigame!" };
-            //FindObjectOfType<DialogManager>().StartDialogue(dialogue);
+            //FindFirstObjectByType<DialogManager>().StartDialogue(dialogue);
         }
         else
         {
@@ -36,7 +36,7 @@ public class DialogTrigger : MonoBehaviour
                 }
             }
             
-            FindObjectOfType<DialogManager>().StartDialogue(dialogue);
+            FindFirstObjectByType<DialogManager>().StartDialogue(dialogue);
           
         }
 
@@ -68,7 +68,7 @@ public class DialogTrigger : MonoBehaviour
 
         }
         
-        FindObjectOfType<DialogManager>().StartDialogue(dialogue);
+        FindFirstObjectByType<DialogManager>().StartDialogue(dialogue);
     }
     
    

@@ -95,7 +95,7 @@ public class SceneManage : MonoBehaviour
                break;
        }
         
-        FindObjectOfType<DialogManager>().StartDialogue(dialogue);
+        FindFirstObjectByType<DialogManager>().StartDialogue(dialogue);
     }
      
     

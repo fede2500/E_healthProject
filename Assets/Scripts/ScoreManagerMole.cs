@@ -134,7 +134,7 @@ public class ScoreManagerMole : MonoBehaviour
                     tryagain.SetActive(true);
                     break;
             }
-            FindObjectOfType<DialogManager>().StartDialogue(dialogue);
+            FindFirstObjectByType<DialogManager>().StartDialogue(dialogue);
 
             data.setMolePlayed(data.getMolePlayed() + 1);
         }

@@ -7,7 +7,6 @@ using UnityEngine;
 public class SubmitSolution : MonoBehaviour
 {
     private ScoreManager _scoreManager = ScoreManager.getInstance();
-    private bool correct = false;
     public TextMeshProUGUI textToShow, receptText;
     public GameObject end;
     private GameData data;
