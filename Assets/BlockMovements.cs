@@ -47,7 +47,7 @@ public class BlockMovements : MonoBehaviour
             movement.x=Input.GetAxisRaw("Horizontal");
             movement.y=Input.GetAxisRaw("Vertical");
 
-            int speed = 45;
+            int speed = 35;
             
             Rigidbody2D block = gameObject.GetComponent<Rigidbody2D>();
             
