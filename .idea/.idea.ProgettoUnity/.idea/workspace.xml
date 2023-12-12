@@ -6,11 +6,8 @@
   <component name="ChangeListManager">
     <list default="true" id="7d08c647-c71e-4405-adb0-ec53e8517115" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.ProgettoUnity/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.ProgettoUnity/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/BlockMovements.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/BlockMovements.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Blocks.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Blocks.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/SphereMovements.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/SphereMovements.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Siti_att_nonAtt.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Siti_att_nonAtt.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Unity.VisualScripting.Generated/VisualScripting.Flow/UnitOptions.db" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Unity.VisualScripting.Generated/VisualScripting.Flow/UnitOptions.db" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -21,8 +18,10 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$PROJECT_DIR$/Assets/PlayNewGame.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.collab-proxy@2.0.7/Editor/PlasticSCM/DrawGuiModeSwitcher.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.textmeshpro@3.0.6/Scripts/Editor/TMPro_CreateObjectMenu.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.ugui@1.0.0/Tests/Runtime/TextEditor/TextEditorTests.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.visualscripting@1.8.0/Editor/VisualScripting.Flow/Options/UnitBase.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 8
@@ -118,6 +117,7 @@
       <workItem from="1702386623839" duration="398000" />
       <workItem from="1702387213735" duration="315000" />
       <workItem from="1702387696310" duration="8721000" />
+      <workItem from="1702420944849" duration="2639000" />
     </task>
     <servers />
   </component>
