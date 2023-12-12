@@ -43,22 +43,22 @@ public class BlockMovements : MonoBehaviour
             if (Input.GetKeyDown(KeyCode.RightArrow))  // Cambia KeyCode in base alla tua esigenza
             {
                 // Sposta il blocco a destra
-                transform.Translate(Vector2.right * 25 * Time.deltaTime);
+                transform.Translate(Vector2.right * 60 * Time.deltaTime);
             }
             else if (Input.GetKeyDown(KeyCode.LeftArrow))  // Cambia KeyCode in base alla tua esigenza
             {
                 // Sposta il blocco a destra
-                transform.Translate(Vector2.left * 25 * Time.deltaTime);
+                transform.Translate(Vector2.left * 60 * Time.deltaTime);
             }
             else if (Input.GetKeyDown(KeyCode.UpArrow))  // Cambia KeyCode in base alla tua esigenza
             {
                 // Sposta il blocco a destra
-                transform.Translate(Vector2.up * 25 * Time.deltaTime);
+                transform.Translate(Vector2.up * 60 * Time.deltaTime);
             }
             else if (Input.GetKeyDown(KeyCode.DownArrow))  // Cambia KeyCode in base alla tua esigenza
             {
                 // Sposta il blocco a destra
-                transform.Translate(Vector2.down * 25 * Time.deltaTime);
+                transform.Translate(Vector2.down * 60 * Time.deltaTime);
             } 
             
             
