@@ -50,5 +50,8 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Blocks.unity
     guid: 9158a9fd7d966ea4c891e4e2d54e9c1d
+  - enabled: 1
+    path: Assets/Scenes/FInalScene.unity
+    guid: d0813394ecc22124f9dea0dafb0f9965
   m_configObjects: {}
   m_UseUCBPForAssetBundles: 0

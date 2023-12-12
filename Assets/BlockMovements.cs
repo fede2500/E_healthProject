@@ -6,29 +6,37 @@ public class BlockMovements : MonoBehaviour
     private bool isSelected = false;
     public GameObject tutorial;
     
+    
+    private Vector2 movement;
 
+    
     void OnMouseDown()
     {
-        
+    
         if (!tutorial.activeSelf)
         {
             isSelected = !isSelected; // Quando il blocco viene cliccato, diventa selezionato
-        
+            Rigidbody2D block = this.GetComponent<Rigidbody2D>();
+
             if (isSelected)
             {
                 // Imposta il blocco come "cliccato" e non consente il clic su altri blocchi
                 this.GetComponent<SpriteRenderer>().color = Color.red;
+              
+                block.constraints = RigidbodyConstraints2D.None | RigidbodyConstraints2D.FreezeRotation;
+
             }
             else
             {
                 this.GetComponent<SpriteRenderer>().color = Color.blue;
+                block.constraints = RigidbodyConstraints2D.FreezePositionX | RigidbodyConstraints2D.FreezePositionY | RigidbodyConstraints2D.FreezeRotation;
+
             }
         }
         
        
     }
 
-    
 
     // Update is called once per frame
     void Update()
@@ -36,52 +44,15 @@ public class BlockMovements : MonoBehaviour
 
         if (isSelected && !tutorial.activeSelf)
         {
-            // Salva la posizione attuale prima del movimento
-            Vector2 posizioneAttuale = transform.position;
-            
-            // Controlla l'input per il movimento verso destra
-            if (Input.GetKeyDown(KeyCode.RightArrow))  // Cambia KeyCode in base alla tua esigenza
-            {
-                // Sposta il blocco a destra
-                transform.Translate(Vector2.right * 60 * Time.deltaTime);
-            }
-            else if (Input.GetKeyDown(KeyCode.LeftArrow))  // Cambia KeyCode in base alla tua esigenza
-            {
-                // Sposta il blocco a destra
-                transform.Translate(Vector2.left * 60 * Time.deltaTime);
-            }
-            else if (Input.GetKeyDown(KeyCode.UpArrow))  // Cambia KeyCode in base alla tua esigenza
-            {
-                // Sposta il blocco a destra
-                transform.Translate(Vector2.up * 60 * Time.deltaTime);
-            }
-            else if (Input.GetKeyDown(KeyCode.DownArrow))  // Cambia KeyCode in base alla tua esigenza
-            {
-                // Sposta il blocco a destra
-                transform.Translate(Vector2.down * 60 * Time.deltaTime);
-            } 
-            
-            
+            movement.x=Input.GetAxisRaw("Horizontal");
+            movement.y=Input.GetAxisRaw("Vertical");
 
-            // Ottieni il collider del blocco attuale
-            Collider2D colliderAttuale = GetComponent<Collider2D>();
-
-            // Ottieni tutti i collider degli altri blocchi
-            Collider2D[] colliderAltriBlocchi = Physics2D.OverlapBoxAll(transform.position, colliderAttuale.bounds.size, 0);
-
-            // Controlla se ci sono collisioni con altri blocchi
-            foreach (Collider2D altroCollider in colliderAltriBlocchi)
-            {
-                
-                if (altroCollider != colliderAttuale && 
-                    !altroCollider.Equals(finishBlock) &&
-                    !altroCollider.tag.Equals("Checkpoint"))
-                {
-                    // Se c'è sovrapposizione, annulla il movimento
-                    transform.position = posizioneAttuale;
-                    break;
-                }
-            }
+            int speed = 45;
+            
+            Rigidbody2D block = gameObject.GetComponent<Rigidbody2D>();
+            
+            block.MovePosition(block.position + movement * speed * Time.deltaTime);
+            
         }
     }
     
