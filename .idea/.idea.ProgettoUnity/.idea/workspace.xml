@@ -5,25 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7d08c647-c71e-4405-adb0-ec53e8517115" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Assets/Unity.VisualScripting.Generated/VisualScripting.Core.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Unity.VisualScripting.Generated/VisualScripting.Core/AotStubs.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Unity.VisualScripting.Generated/VisualScripting.Core/AotStubs.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Unity.VisualScripting.Generated/VisualScripting.Core/link.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Unity.VisualScripting.Generated/VisualScripting.Core/link.xml.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.ProgettoUnity/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.ProgettoUnity/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Home.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Home.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/DialogTrigger.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/DialogTrigger.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/GameData.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/GameData.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Mole.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Mole.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Resume.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Resume.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/SceneManage.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/SceneManage.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/ScoreManagerMole.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/ScoreManagerMole.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/SubmitSolution.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/SubmitSolution.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Save.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Save.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Blocks.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Blocks.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/SphereMovements.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/SphereMovements.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Examples &amp; Extras/Resources/Fonts &amp; Materials/Electronic Highway Sign SDF.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Examples &amp; Extras/Resources/Fonts &amp; Materials/Electronic Highway Sign SDF.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/bowlingPin1.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/bowlingPin1.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/bowlingPin2.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/bowlingPin2.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/bowlingPin3.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/bowlingPin3.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -48,29 +34,37 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_ADD_EXTERNAL_FILES": "true",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "try__merge",
-    "ignore.virus.scanning.warn.message": "true",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;try__merge&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   },
-  "keyToStringList": {
-    "rider.external.source.directories": [
-      "C:\\Users\\cricr\\AppData\\Roaming\\JetBrains\\Rider2023.3\\resharper-host\\DecompilerCache",
-      "C:\\Users\\cricr\\AppData\\Roaming\\JetBrains\\Rider2023.3\\resharper-host\\SourcesCache",
-      "C:\\Users\\cricr\\AppData\\Local\\Symbols\\src"
+  &quot;keyToStringList&quot;: {
+    &quot;rider.external.source.directories&quot;: [
+      &quot;C:\\Users\\cricr\\AppData\\Roaming\\JetBrains\\Rider2023.3\\resharper-host\\DecompilerCache&quot;,
+      &quot;C:\\Users\\cricr\\AppData\\Roaming\\JetBrains\\Rider2023.3\\resharper-host\\SourcesCache&quot;,
+      &quot;C:\\Users\\cricr\\AppData\\Local\\Symbols\\src&quot;
     ]
   }
-}]]></component>
+}</component>
   <component name="RunManager" selected="Attach to Unity Editor.Attach to Unity Editor">
+    <configuration name="Standalone Player" type="RunUnityExe" factoryName="Unity Executable">
+      <option name="EXE_PATH" value="$PROJECT_DIR$/build\EscapeRoom.exe" />
+      <option name="PROGRAM_PARAMETERS" value="" />
+      <option name="WORKING_DIRECTORY" value="C:\Users\cricr\ProgettoUnity\build" />
+      <option name="PASS_PARENT_ENVS" value="1" />
+      <option name="USE_EXTERNAL_CONSOLE" value="0" />
+      <method v="2" />
+    </configuration>
     <configuration name="Start Unity" type="RunUnityExe" factoryName="Unity Executable">
       <option name="EXE_PATH" value="C:\Program Files\Unity\Hub\Editor\2023.1.14f1\Editor\Unity.exe" />
       <option name="PROGRAM_PARAMETERS" value="-projectPath C:\Users\cricr\ProgettoUnity -debugCodeOptimization" />
@@ -120,6 +114,8 @@
       <workItem from="1702287418312" duration="541000" />
       <workItem from="1702288030183" duration="1668000" />
       <workItem from="1702289999391" duration="15000" />
+      <workItem from="1702386623839" duration="398000" />
+      <workItem from="1702387213735" duration="315000" />
     </task>
     <servers />
   </component>

@@ -9,6 +9,8 @@ using UnityEngine.SceneManagement;
 public class Save : MonoBehaviour
 {
     GameData data = GameData.getInstance();
+    
+    public Dialogue dialogue;
 
     private string savePath = "GameData.json";
     
@@ -17,7 +19,9 @@ public class Save : MonoBehaviour
     {
         string json = JsonUtility.ToJson(data);
         File.WriteAllText(savePath, json);
-        Debug.Log("data saved");
+        dialogue.sentences = new[] { "Data saved!" };
+        FindFirstObjectByType<DialogManager>().StartDialogue(dialogue);
+
     }
     
 

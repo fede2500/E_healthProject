@@ -124,6 +124,7 @@ public class SphereMovements : MonoBehaviour
                         textToShow.text = "Checkpoint!";
                         textToShow.gameObject.SetActive(true);
                         altroCollider.gameObject.SetActive(false);
+                        //prova prova
                     }
                 
              
