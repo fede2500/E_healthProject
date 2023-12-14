@@ -74,7 +74,7 @@ public class SphereMovements : MonoBehaviour
             movement.x=Input.GetAxisRaw("Horizontal");
             movement.y=Input.GetAxisRaw("Vertical");
 
-            int speed = 35;
+            int speed = 25;
             
             Rigidbody2D block = gameObject.GetComponent<Rigidbody2D>();
             
