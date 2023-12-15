@@ -3,7 +3,7 @@ from sklearn.decomposition import PCA
 import matplotlib.pyplot as plt
 
 def runPCA(data):
-    # Find the best PCA components
+    # finding the best PCA components
     nums = np.arange(25)
     var_ratio = []
     for num in nums:
@@ -11,6 +11,7 @@ def runPCA(data):
         pca.fit(data)
         var_ratio.append(np.sum(pca.explained_variance_ratio_))
 
+    # plotting
     plt.figure()
     plt.grid()
     plt.plot(nums, var_ratio, marker='o')

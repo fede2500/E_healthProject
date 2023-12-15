@@ -6,43 +6,44 @@ import pandas as pd
 
 def mwu(originalClusterized):
 
-    # Ottieni una lista di nomi di colonne (variabili) da testare (escludendo la colonna "Labels K-means")
-    variabili_da_testare = originalClusterized.columns.difference(['Labels K-means'])
+    # the result is a list with the name of the columns (aka the features) to test
+    # (this is true for all the features except 'Labels K-means')
+    var_to_test = originalClusterized.columns.difference(['Labels K-means'])
 
-    # Creo un DataFrame vuoto per raccogliere i risultati
-    # result_df = pd.DataFrame(columns=['Variabile', 'P-Value Kruskal', "Result Kruskal", "P-value MWY", "Result MWY"])
-    result_df = pd.DataFrame(columns=['Variabile', "Result MWU"])
+    # empty dataframe which will host all the restults
+    result_df = pd.DataFrame(columns=['Variable', "Result MWU"])
 
-    summary_p_values = pd.DataFrame(columns=['Variabile', "p 0 vs 1", "Diff 0 1", "p 0 vs 2", "Diff 0 2", "p 1 vs 2", "Diff 1 2",])
+    summary_p_values = pd.DataFrame(columns=['Variable', "p 0 vs 1", "Diff 0 1", "p 0 vs 2", "Diff 0 2", "p 1 vs 2", "Diff 1 2",])
 
-    alpha = 0.05 / 3  # Livello di significatività , /3 per Bonferroni (?)
+    # level of significance/3 so to apply the Bonferroni correction
+    alpha = 0.05 / 3
 
-    for variabile in variabili_da_testare:
-        # per uno stesso attributo (colonna):
-        # risposte_cluster_1 conterrà la lista di risposte date alla colonna X dagli appartenti al cluster 1 ecc.
-        risposte_cluster_1 = np.array(
-            originalClusterized[(originalClusterized['Labels K-means'] == 0.0)][variabile].values)
-        risposte_cluster_2 = np.array(
-            originalClusterized[(originalClusterized['Labels K-means'] == 1.0)][variabile].values)
-        risposte_cluster_3 = np.array(
-            originalClusterized[(originalClusterized['Labels K-means'] == 2.0)][variabile].values)
+    for variable in var_to_test:
+        # fot the very same feature (column)
+        # cluster1_answers will hold the list of the given answers at the xth column
+        # for the memebers of the given cluster (and so on for the other clusters)
+        cluster1_answers = np.array(
+            originalClusterized[(originalClusterized['Labels K-means'] == 0.0)][variable].values)
+        cluster2_answers = np.array(
+            originalClusterized[(originalClusterized['Labels K-means'] == 1.0)][variable].values)
+        cluster3_answers = np.array(
+            originalClusterized[(originalClusterized['Labels K-means'] == 2.0)][variable].values)
 
-        # creiamo un array con le risposte dei singoli cluster nella colonna "variabile"
-        gruppi = [risposte_cluster_1, risposte_cluster_2, risposte_cluster_3, ]
+        # creation of an array with the answers of each cluster in the column 'variable'
+        groups = [cluster1_answers, cluster2_answers, cluster3_answers]
 
-        # Creo tutte le possibili coppie di risposte (coppie di cluster)
-        coppie = list(itertools.combinations(range(len(gruppi)), 2))
+        # creation of all the possible pairs of answers (pairs of clusters)
+        pairs = list(itertools.combinations(range(len(groups)), 2))
 
-        # MWU per ogni coppia
-        risultati = {}
-        for i, j in coppie:
-            gruppo1, gruppo2 = gruppi[i], gruppi[j]
-            statistiche, p_value = stats.mannwhitneyu(gruppo1, gruppo2)
-            risultati[(i, j)] = (statistiche, p_value)
+        # MWU for each pair
+        results = {}
+        for i, j in pairs:
+            group1, group2 = groups[i], groups[j]
+            statistics, p_value = stats.mannwhitneyu(group1, group2)
+            results[(i, j)] = (statistics, p_value)
 
-        # Definiamo una variabile che vale 0 se non cè differenza significativa
-        # tra tutte le coppie, 1 altrimenti
-
+        # definition of a variable that will be 0 if there are no significant differences among the pairs
+        # otherwise 1
         isDifferenceSign = 1
         diff_0_1 = "Diff. significative"
         diff_0_2 = "Diff. significative"
@@ -51,8 +52,8 @@ def mwu(originalClusterized):
         result_0_2 = 0
         result_1_2 = 0
 
-        for chiave, (statistiche, p_value) in risultati.items():
-             i, j = chiave
+        for keys, (statistics, p_value) in results.items():
+             i, j = keys
              print(f"Mann-Whitney tra Cluster {i} e Cluster {j}:")
              if(i == 0 and j == 1):
                  result_0_1 = p_value
@@ -67,22 +68,17 @@ def mwu(originalClusterized):
                  if p_value >= alpha:
                      diff_1_2 = "Diff. NON significative"
 
-             print(f"Valore p: {p_value}")
+             print(f"P value: {p_value}")
              if p_value >= alpha:
                 isDifferenceSign = 0
 
-
-
-        # se isDifferenceSign non è mai andato a 0, vuol dire che la diff è significativa
-        # per ogni coppia
+        # if isDifferenceSign has never been 0 then it means that the difference is relevant for all the pairs
         if (isDifferenceSign):
             string_result_mwu = "Diff. significative"
         else:
             string_result_mwu = "Diff. NON significative"
-        result_df.loc[len(result_df)] = [variabile, string_result_mwu]
+        result_df.loc[len(result_df)] = [variable, string_result_mwu]
 
-        summary_p_values.loc[len(summary_p_values)] = [variabile, result_0_1, diff_0_1, result_0_2, diff_0_2, result_1_2, diff_1_2]
-
-
+        summary_p_values.loc[len(summary_p_values)] = [variable, result_0_1, diff_0_1, result_0_2, diff_0_2, result_1_2, diff_1_2]
 
     return result_df, summary_p_values

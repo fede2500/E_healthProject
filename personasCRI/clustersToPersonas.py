@@ -1,5 +1,4 @@
 import statistics
-
 import pandas as pd
 from matplotlib import pyplot as plt
 import seaborn as sns
@@ -33,17 +32,15 @@ def clustersToPersonas(fdma, fdmaScores, data, kmeans):
     plt.show()
     '''
 
-    #K-Means algorithm has learnt from our new components and created 3 clusters .
-    # I would like to see old datasets with labels .
-
+    # the K-mean algorithm trained with the data given to them has found 3 clusters
+    # to note that the data given to the kmeans were not the original ones
     data['Labels K-means'] = kmeans.labels_
     print(data.head())
 
     data[data.columns]=data[data.columns].astype(float)
 
-    # We calculate the means by segments.
+    # computation of the means by segments
     df_freq = data.groupby(['Labels K-means']).median()
 
-    #We round the results
-
+    # results
     return df_freq.round(), data

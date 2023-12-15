@@ -2,31 +2,29 @@ import pandas as pd
 from scipy import stats
 
 def kruskal(originalClusterized):
+    # for the very same feature (so speaking about the columns):
+    # cluster1_answers will contain the list of the answers of the xth column of the subjects within the cluster 1
+    # cluster2_answers will contain the list of the answers of the xth column of the subjects within the cluster 2
+    # cluster3_answers will contain the list of the answers of the xth column of the subjects within the cluster 3
 
-    # per uno stesso attributo (colonna):
-    # risposte_cluster_1 conterrà la lista di risposte date alla colonna X dagli appartenti al cluster 1
-    # risposte_cluster_2 conterrà la lista di risposte date alla colonna X dagli appartenti al cluster 2
-    # risposte_cluster_3 conterrà la lista di risposte date alla colonna X dagli appartenti al cluster 3
+    # the result is a list with the name of the columns (features) to test
+    # (this is valid for all the columns except 'Labels K_means')
+    var_to_test = originalClusterized.columns.difference(['Labels K-means'])
 
-    # Ottieni una lista di nomi di colonne (variabili) da testare (escludendo la colonna "Labels K-means")
-    variabili_da_testare = originalClusterized.columns.difference(['Labels K-means'])
+    # level of significance
+    alpha = 0.05 / 3
 
-    alpha = 0.05 / 3  # Livello di significatività
-
-    # Creo un DataFrame vuoto per raccogliere i risultati
-    # result_df = pd.DataFrame(columns=['Variabile', 'P-Value Kruskal', "Result Kruskal", "P-value MWY", "Result MWY"])
+    # empty dataframe which will host the results
     result_df = pd.DataFrame(columns=['Variabile', 'P-Value Kruskal', "Result Kruskal"])
 
-    for variabile in variabili_da_testare:
-        risposte_cluster_1 = originalClusterized[(originalClusterized['Labels K-means'] == 0.0)][variabile].values
-        risposte_cluster_2 = originalClusterized[(originalClusterized['Labels K-means'] == 1.0)][variabile].values
-        risposte_cluster_3 = originalClusterized[(originalClusterized['Labels K-means'] == 2.0)][variabile].values
+    for variable in var_to_test:
+        cluster1_answers = originalClusterized[(originalClusterized['Labels K-means'] == 0.0)][variable].values
+        cluster2_answers = originalClusterized[(originalClusterized['Labels K-means'] == 1.0)][variable].values
+        cluster3_answers = originalClusterized[(originalClusterized['Labels K-means'] == 2.0)][variable].values
 
-        result_kruskal, p_value_kruskal = stats.kruskal(risposte_cluster_1, risposte_cluster_2, risposte_cluster_3)
+        result_kruskal, p_value_kruskal = stats.kruskal(cluster1_answers, cluster2_answers, cluster3_answers)
 
-        # result_MWY, p_value_MWY = stats.mannwhitneyu(risposte_cluster_1, risposte_cluster_2, alternative = 'greater')
-
-        print("Result column " + variabile + " : ")
+        print("Result column " + variable + " : ")
         if p_value_kruskal < alpha:
             string_result_kruskal = "Diff. significative"
         else:
@@ -38,8 +36,7 @@ def kruskal(originalClusterized):
             string_result_MWY = "Diff. NON significative"
         '''
 
-        # Aggiungo il p_value al DataFrame
-        # result_df.loc[len(result_df)] = [variabile, p_value_kruskal, string_result_kruskal, p_value_MWY, string_result_MWY]
-        result_df.loc[len(result_df)] = [variabile, p_value_kruskal, string_result_kruskal]
+        # adding the p-value
+        result_df.loc[len(result_df)] = [variable, p_value_kruskal, string_result_kruskal]
 
     return result_df
