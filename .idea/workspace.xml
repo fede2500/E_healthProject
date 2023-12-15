@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="8f5e1e1a-f90e-47d2-87bc-08388bbdf9df" name="Changes" comment="è stato un parto">
+      <change beforePath="$PROJECT_DIR$/main/dataanalysis/expo.ipynb" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="personasCRI" />
+      </map>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
+  "lastFilter": {
+    "state": "OPEN",
+    "assignee": "maccarismos"
+  }
+}]]></component>
+  <component name="GithubPullRequestsUISettings">
+    <option name="selectedUrlAndAccountId">
+      <UrlAndAccount>
+        <option name="accountId" value="29a3319e-b909-4055-9bf9-d6881abe0e0d" />
+        <option name="url" value="https://github.com/fede2500/E_healthProject" />
+      </UrlAndAccount>
+    </option>
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;customColor&quot;: &quot;&quot;,
+  &quot;associatedIndex&quot;: 2
+}</component>
+  <component name="ProjectId" id="2YXCb4y8fTKNwXf19hYJh1uMk23" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "git-widget-placeholder": "main",
+    "last_opened_file_path": "C:/Users/mcrin/OneDrive - Politecnico di Milano/secondo anno magistrale/methods and application of ai in biomedicine/applied ai in biomedical fields/project",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="8f5e1e1a-f90e-47d2-87bc-08388bbdf9df" name="Changes" comment="" />
+      <created>1700662611968</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1700662611968</updated>
+      <workItem from="1700662615609" duration="29000" />
+      <workItem from="1702646622048" duration="11581000" />
+    </task>
+    <task id="LOCAL-00001" summary="editing a bit the comments and some enhancement to the code">
+      <option name="closed" value="true" />
+      <created>1702651225173</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1702651225173</updated>
+    </task>
+    <task id="LOCAL-00002" summary="editing a bit the comments and some enhancement to the code">
+      <option name="closed" value="true" />
+      <created>1702651279555</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1702651279555</updated>
+    </task>
+    <task id="LOCAL-00003" summary="prova">
+      <option name="closed" value="true" />
+      <created>1702654234930</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1702654234930</updated>
+    </task>
+    <task id="LOCAL-00004" summary="prova">
+      <option name="closed" value="true" />
+      <created>1702654617090</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1702654617091</updated>
+    </task>
+    <task id="LOCAL-00005" summary="è stato un parto">
+      <option name="closed" value="true" />
+      <created>1702657732770</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1702657732770</updated>
+    </task>
+    <task id="LOCAL-00006" summary="è stato un parto">
+      <option name="closed" value="true" />
+      <created>1702658268658</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1702658268658</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="editing a bit the comments and some enhancement to the code" />
+    <MESSAGE value="prova" />
+    <MESSAGE value="è stato un parto" />
+    <option name="LAST_COMMIT_MESSAGE" value="è stato un parto" />
+  </component>
+</project>
