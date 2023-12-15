@@ -13,8 +13,8 @@ def runFDMA(data):
     data[num] = data[num].astype(float)
     data[cat] = data[cat].astype(str)
 
+    print('Data Type of features:')
     print(data.dtypes)
-    print(data)
 
     # finding the best FDMA components
     var_ratio = []

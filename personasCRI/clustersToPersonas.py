@@ -35,6 +35,7 @@ def clustersToPersonas(fdma, fdmaScores, data, kmeans):
     # the K-mean algorithm trained with the data given to them has found 3 clusters
     # to note that the data given to the kmeans were not the original ones
     data['Labels K-means'] = kmeans.labels_
+    print('Orignal dataset with labels concatenated:')
     print(data.head())
 
     data[data.columns]=data[data.columns].astype(float)

@@ -54,7 +54,7 @@ def mwu(originalClusterized):
 
         for keys, (statistics, p_value) in results.items():
              i, j = keys
-             print(f"Mann-Whitney tra Cluster {i} e Cluster {j}:")
+             #print(f"Mann-Whitney tra Cluster {i} e Cluster {j}:")
              if(i == 0 and j == 1):
                  result_0_1 = p_value
                  if p_value >= alpha:
@@ -68,7 +68,7 @@ def mwu(originalClusterized):
                  if p_value >= alpha:
                      diff_1_2 = "Diff. NON significative"
 
-             print(f"P value: {p_value}")
+             #print(f"P value: {p_value}")
              if p_value >= alpha:
                 isDifferenceSign = 0
 

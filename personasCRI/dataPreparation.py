@@ -7,21 +7,24 @@ from sklearn.impute import SimpleImputer
 from sklearn.decomposition import PCA
 
 def prepareData(data):
-    # the questionnaires condiered were:
+    # the questionnaires considered were:
     # - phq
     # - gad
     # - eheals
     data_new = data.iloc[:,0:29]
-    print(data_new.head())
+    print(data_new.head(10))
 
     # inspection of the features
+    print('In total there are ' + str(len(data_new.columns)) + ' features:')
     for feature in data_new.columns:
         print(feature)
-    print('in total there are ' + str(len(data_new.columns)) + ' features')
+    print('')
 
     # finding the missing values
     missing_values = data_new.isnull().sum()
+    print('Counting of missing values:')
     print(missing_values)
+    print('')
 
     # plotting age distribution
     plt.figure()
@@ -41,14 +44,18 @@ def prepareData(data):
     plt.ylabel('Count')
     # plt.show()
     print('The most frequent education is ' + str(data_new['education'].mode()[0]))
+    print('')
 
     # the missing values are replaced with the most frequent among the specific feature
     # for education (high school) and age (42)
     data_new['age'].fillna(data_new['age'].mode()[0], inplace = True)
     data_new['education'].fillna(data_new['education'].mode()[0], inplace = True)
 
+    print('Count of age values:')
     print(data_new['age'].value_counts(ascending = False))
+    print('Count of education values:')
     print(data_new['education'].value_counts(ascending = False))
+    print('')
 
     # plotting gender distribution
     sns.displot(data_new['gender'], bins=4, kde=False, shrink=.8, height=6, aspect=1.5)
@@ -58,6 +65,21 @@ def prepareData(data):
     # plt.show()
     print("Most of the survey partecipants didn't mention their gender")
 
+    # plotting income distribution
+    sns.displot(data_new['income'], bins=46, kde=False, shrink=.8, height=6, aspect=1.5)
+    plt.title('Income Distribution')
+    plt.xlabel('Income')
+    plt.ylabel('Count')
+    # plt.show()
+
+    # plotting marital status distribution
+    sns.displot(data_new['marital'], bins=5, kde=False, shrink=.8, height=6, aspect=1.5)
+    plt.title('Marital Status Distribution')
+    plt.xlabel('Marital Status')
+    plt.ylabel('Count')
+    # plt.show()
+
+
     # splitting the questionnaires
     df_phq = data_new.iloc[:, 5:14]
     # print(df_phq.head(3))
@@ -66,7 +88,7 @@ def prepareData(data):
     df_eheals = data_new.iloc[:,21:29]
     # print(df_eheals.head(3))
 
-    # plotting
+    # plotting answers to questionnaires
     fig, axs = plt.subplots(df_phq.shape[1], figsize=(8, 12))
     # for each value a different color
     colors = plt.cm.viridis(np.linspace(0, 1, df_phq.shape[0]))
@@ -95,6 +117,7 @@ def prepareData(data):
     print("the phq questionnaire variance is: ", calcolo_var(df_phq, df_phq.max().max()))
     print("the gad questionnaire variance is: ", calcolo_var(df_gad, df_gad.max().max()))
     print("the eheals questionnaire variance is: ", calcolo_var(df_eheals, df_eheals.max().max()))
+    print('')
 
     # low variance for the various answers
     # so to handle the missing values within the questionnaires
@@ -112,9 +135,11 @@ def prepareData(data):
 
     # creation of the full data set
     data_full = pd.concat([data_new.iloc[:,0:5],df_phq,df_gad,df_eheals],axis=1)
-    print(data_full.head(30))
-
+    print('New full dataset:')
+    print(data_full.head(10))
+    print('')
     # check of the missing values
+    print('Counting again null values:')
     print(data_full.isnull().sum())
 
     '''
