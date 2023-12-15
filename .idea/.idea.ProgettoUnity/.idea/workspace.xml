@@ -6,8 +6,8 @@
   <component name="ChangeListManager">
     <list default="true" id="7d08c647-c71e-4405-adb0-ec53e8517115" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.ProgettoUnity/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.ProgettoUnity/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/BlockMovements.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/BlockMovements.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/SphereMovements.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/SphereMovements.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/SceneManage.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/SceneManage.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/SubmitSolution.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/SubmitSolution.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -119,6 +119,7 @@
       <workItem from="1702387696310" duration="8721000" />
       <workItem from="1702420944849" duration="2639000" />
       <workItem from="1702423727707" duration="119000" />
+      <workItem from="1702646031030" duration="925000" />
     </task>
     <servers />
   </component>

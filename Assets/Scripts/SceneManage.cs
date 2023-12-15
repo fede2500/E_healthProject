@@ -57,7 +57,7 @@ public class SceneManage : MonoBehaviour
                    dialogue.sentences = new[]
                    {
                        "<u>Andrea:</u>" + System.Environment.NewLine +System.Environment.NewLine + "oh yeah, the Never ending show never let’s me down",
-                       "<u>Andrea:</u>" + System.Environment.NewLine + System.Environment.NewLine +"For God’s sake! It’s <u>12 a.m.</u> already!!!",
+                       "<u>Andrea:</u>" + System.Environment.NewLine + System.Environment.NewLine +"For God’s sake! It’s <u>12 a.m.</u> already! <u>Almost lunch time</u>!!",
                        "<u>Andrea:</u>" + System.Environment.NewLine + System.Environment.NewLine +"I need to take the pills the doctor prescribed me!",
                        "<u>Andrea:</u>" + System.Environment.NewLine + System.Environment.NewLine +"Could you bring them to me please?",
                        "<u>Andrea:</u>" + System.Environment.NewLine + System.Environment.NewLine +"They’re in one of the drawers between the computer and the bookshelves"
@@ -68,7 +68,7 @@ public class SceneManage : MonoBehaviour
                    dialogue.sentences = new[]
                    {
                        "<u>Andrea:</u>" + System.Environment.NewLine +System.Environment.NewLine + "oh yeah, the Never ending show never let’s me down",
-                       "<u>Andrea:</u>" + System.Environment.NewLine + System.Environment.NewLine +"For God’s sake! It’s 12 a.m. already!!!",
+                       "<u>Andrea:</u>" + System.Environment.NewLine + System.Environment.NewLine +"For God’s sake! It’s 12 a.m. already! Almost lunch time!!",
                        "<u>Andrea:</u>" + System.Environment.NewLine + System.Environment.NewLine +"I need to take the pills the doctor prescribed me!",
                        "<u>Andrea:</u>" + System.Environment.NewLine + System.Environment.NewLine +"Could you bring them to me please?",
                        "<u>Andrea:</u>" + System.Environment.NewLine +System.Environment.NewLine + "They’re in one of the drawers between the computer and the bookshelves"

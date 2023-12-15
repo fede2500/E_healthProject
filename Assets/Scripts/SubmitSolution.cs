@@ -32,7 +32,7 @@ public class SubmitSolution : MonoBehaviour
         }
         else
         {
-            if (data.getPlayerCluster() == 2)
+            if (data.getPlayerCluster() == 1)
             {
                 if (attempts == 0)
                 {
@@ -48,7 +48,7 @@ public class SubmitSolution : MonoBehaviour
             }
             else
             {
-                textToShow.SetText("Try Again!");
+                textToShow.SetText("Try Again! Remember: it is almost lunch time");
             }
             
             
