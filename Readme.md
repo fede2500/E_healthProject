@@ -3,7 +3,7 @@
 
 Group: 13
 
-Professor : Enrico Gianluca Caiani, Simona Ferrante
+Professors : Enrico Gianluca Caiani, Simona Ferrante
 
 ## Running
 
