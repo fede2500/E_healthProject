@@ -58,7 +58,7 @@ public class DialogTrigger : MonoBehaviour
                 dialogue.sentences = new[]
                 {
                     "<u>Andrea:</u>" + System.Environment.NewLine +System.Environment.NewLine +"Are you sure that’s the right website?",
-                    "<u>Andrea:</u>" + System.Environment.NewLine +System.Environment.NewLine +"Try to have a look to some details: would you share your credit card number with a site?"
+                    "<u>Andrea:</u>" + System.Environment.NewLine +System.Environment.NewLine +"Try to have a look to some details: would you share your credit card number with a site? Would you trust a therapy that cures you in '5 easy steps'? Is the website address safe?"
                };
                 break;
             
@@ -70,6 +70,27 @@ public class DialogTrigger : MonoBehaviour
         
         FindFirstObjectByType<DialogManager>().StartDialogue(dialogue);
     }
+    
+    public void hintSite()
+        {
+            Debug.Log(data.getPlayerCluster());
+            switch (data.getPlayerCluster())
+            {
+                case 1:
+                    
+                    dialogue.sentences = new[]
+                    {
+                        "<u>Andrea:</u>" + System.Environment.NewLine +System.Environment.NewLine +"Try to have a look to some details: would you share your credit card number with a site? Would you trust a therapy that cures you in '5 easy steps'? Is the website address safe?"
+                   };
+                    break;
+                
+                default:
+                    break;
+    
+            }
+            
+            FindFirstObjectByType<DialogManager>().StartDialogue(dialogue);
+        }
     
    
     

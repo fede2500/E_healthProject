@@ -11,6 +11,7 @@ public class CountNonAtt : MonoBehaviour
     public GameObject good;
     public GameObject goback;
     public GameObject tryagain;
+    public GameObject hint;
     private bool playgame;
     
     private float startingTime = 30f;
@@ -25,12 +26,14 @@ public class CountNonAtt : MonoBehaviour
 
     private void Start()
     {
+        
         playgame = true;
         timeRemaining = startingTime;
         countT.text = countT.text = $"{_scoreManagerNonAttSite.getInitialScore()}";
         switch(data.getPlayerCluster())
         {
             case 1:
+                hint.SetActive(true);
                 break;
             default:
                 time.SetActive(true);

@@ -128,7 +128,8 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      title_splash - Copia_0: -1622111425255971461
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
